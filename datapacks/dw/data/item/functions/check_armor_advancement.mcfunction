@@ -1,0 +1,1 @@
+advancement grant @s[tag=used_cactus,tag=used_iron,tag=used_chain,tag=used_ninja,tag=used_lucky,tag=used_gladiator] only minecraft:custom/equip_armors

@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:ice"},"title":{"text":"That's Cold!","color":"aqua","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Step on an Ice Mine.","color":"dark_aqua","bold":false}},"parent":"custom/use_risky_brew","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

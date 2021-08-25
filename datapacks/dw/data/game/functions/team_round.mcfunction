@@ -1,0 +1,9 @@
+function game:elimination
+execute as @a[scores={kill_sound=1..}] at @s run function game:kill_sound
+
+execute unless score $time cooldown matches 1.. if entity @a[tag=playing,team=!dead] unless entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,team=gray] run function game:round_red_win
+execute unless score $time cooldown matches 1.. if entity @a[tag=playing,team=!dead] unless entity @a[tag=playing,team=red] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,team=gray] run function game:round_blue_win
+execute unless score $time cooldown matches 1.. if entity @a[tag=playing,team=!dead] unless entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=red] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,team=gray] run function game:round_yellow_win
+execute unless score $time cooldown matches 1.. if entity @a[tag=playing,team=!dead] unless entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=red] unless entity @a[tag=playing,team=gray] run function game:round_green_win
+execute unless score $time cooldown matches 1.. if entity @a[tag=playing,team=!dead] unless entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,team=red] run function game:round_gray_win
+execute unless score $time cooldown matches 1.. unless entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,team=red] unless entity @a[tag=playing,team=gray] run function game:round_tie

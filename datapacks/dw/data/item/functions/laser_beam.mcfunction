@@ -1,0 +1,9 @@
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move
+execute as @e[tag=laser_beam,type=area_effect_cloud] at @s run function item:laser_beam_move

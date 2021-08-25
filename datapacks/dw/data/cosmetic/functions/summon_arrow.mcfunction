@@ -1,0 +1,9 @@
+summon minecraft:arrow ~ ~10 ~ {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~1 ~10 ~ {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~ ~10 ~1 {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~-1 ~10 ~ {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~ ~10 ~-1 {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~1 ~10 ~1 {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~-1 ~10 ~-1 {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~-1 ~10 ~1 {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}
+summon minecraft:arrow ~1 ~10 ~-1 {Tags:["die","rainbow_arrow"],Motion:[0.0d,-0.05d,0.0d]}

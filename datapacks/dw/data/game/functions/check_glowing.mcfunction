@@ -1,0 +1,6 @@
+execute as @e[type=magma_cube,tag=glowing,tag=iron_treasure] at @s unless entity @e[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..1] run function game:glowing_kill
+execute as @e[type=magma_cube,tag=glowing,tag=gold_treasure] at @s unless entity @e[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..1] run function game:glowing_kill
+execute as @e[type=magma_cube,tag=glowing,tag=lapis_treasure] at @s unless entity @e[type=item,nbt={Item:{id:"minecraft:lapis_block"}},distance=..1] run function game:glowing_kill
+execute as @e[type=magma_cube,tag=glowing,tag=emerald_treasure] at @s unless entity @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}},distance=..1] run function game:glowing_kill
+execute as @e[type=magma_cube,tag=glowing,tag=diamond_treasure] at @s unless entity @e[type=item,nbt={Item:{id:"minecraft:diamond_block"}},distance=..1] run function game:glowing_kill
+execute as @e[type=magma_cube,tag=glowing] at @s run data merge entity @e[type=item,nbt={Item:{tag:{Treasure:1}}},distance=..5,limit=1,sort=random] {Fire:-20s}

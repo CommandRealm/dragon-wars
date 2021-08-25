@@ -1,0 +1,3 @@
+tellraw @s [{"text":"--------------------\n","color":"light_purple"},{"text":"           EPIC        \n","color":"dark_purple"},{"text":"       Sword Name   \n","color":"gray"},{"text":"      Stabby Stabby\n","color":"light_purple"},{"text":"---------------------","color":"light_purple"}]
+tellraw @s[tag=sword_stabby] {"text":"Already unlocked . . .","color":"red","italic":true}
+tag @s add sword_stabby

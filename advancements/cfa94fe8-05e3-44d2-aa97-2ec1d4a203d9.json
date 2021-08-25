@@ -1,0 +1,39 @@
+{
+  "minecraft:custom/block_with_shield": {
+    "criteria": {
+      "impossible": "2020-06-22 23:35:39 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/get_a_kill": {
+    "criteria": {
+      "impossible": "2020-06-22 23:18:37 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/kill_player_with_treasure_blocks": {
+    "criteria": {
+      "impossible": "2020-06-22 23:24:57 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/root": {
+    "criteria": {
+      "tick": "2020-06-22 23:16:16 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/kill_with_vampiric_stake": {
+    "criteria": {
+      "impossible": "2020-06-22 23:30:31 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/kill_with_rage_axe": {
+    "criteria": {
+      "impossible": "2020-06-22 23:30:55 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 2565
+}

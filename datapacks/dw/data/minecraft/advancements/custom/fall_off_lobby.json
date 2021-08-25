@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:dragon_breath"},"title":{"text":"Don't Do That In A Game!","color":"red","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Fall off the lobby.","color":"dark_red","bold":false}},"parent":"custom/use_firework","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

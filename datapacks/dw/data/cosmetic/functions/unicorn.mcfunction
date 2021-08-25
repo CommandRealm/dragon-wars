@@ -1,0 +1,2 @@
+tp @s @e[type=horse,distance=..10,limit=1,sort=nearest]
+execute as @e[type=horse,distance=..10,limit=1,sort=nearest] at @s positioned ^ ^ ^1.0 run tp @e[distance=..3,tag=unicorn_horn,type=armor_stand] ~ ~ ~

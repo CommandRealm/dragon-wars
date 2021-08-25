@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tnt",
+    "minecraft:ghast_tear",
+    "minecraft:yellow_glazed_terracotta",
+    "trident",
+    "player_head"
+  ]
+}

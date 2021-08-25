@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:wooden_sword"},"title":{"text":"I'm A Vampire!?","color":"red","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Kill a player with the Vampiric Stake.","color":"#ff8d8d","bold":false}},"parent":"custom/kill_with_rage_axe","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

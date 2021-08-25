@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:magma_block"},"title":{"text":"Killed It!","color":"yellow","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Win a game of the \"Kills\" mode.","color":"dark_purple","bold":false}},"parent":"custom/win_rounds","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

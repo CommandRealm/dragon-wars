@@ -1,0 +1,3 @@
+tellraw @s [{"text":"--------------------\n","color":"light_purple"},{"text":"           EPIC        \n","color":"dark_purple"},{"text":"       Celebration   \n","color":"gray"},{"text":"       Dragon Egg        \n","color":"light_purple"},{"text":"--------------------","color":"light_purple"}]
+tellraw @s[tag=celebration_egg] {"text":"Already unlocked . . .","color":"red","italic":true}
+tag @s add celebration_egg

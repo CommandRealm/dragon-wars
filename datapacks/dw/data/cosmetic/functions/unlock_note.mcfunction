@@ -1,0 +1,3 @@
+tellraw @s [{"text":"--------------------\n","color":"light_purple"},{"text":"           EPIC        \n","color":"dark_purple"},{"text":"      Boost Particle   \n","color":"gray"},{"text":"           Note        \n","color":"light_purple"},{"text":"---------------------","color":"light_purple"}]
+tellraw @s[tag=particle_note] {"text":"Already unlocked . . .","color":"red","italic":true}
+tag @s add particle_note

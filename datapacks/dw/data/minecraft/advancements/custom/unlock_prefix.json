@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:name_tag"},"title":{"text":"Exclusive Prefix","color":"light_purple","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Complete all advancements within this row to unlock.","color":"dark_purple","bold":false}},"parent":"custom/check_out_socials","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

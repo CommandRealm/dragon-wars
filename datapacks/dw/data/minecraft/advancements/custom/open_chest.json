@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:chest"},"title":{"text":"Treasure Hunter","color":"#d37200","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Open a chest at the lobby.","color":"#ab5d00","bold":false}},"parent":"custom/equip_elytra","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

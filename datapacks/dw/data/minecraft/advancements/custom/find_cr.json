@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:chain_command_block"},"title":{"text":"CR Expert","color":"aqua","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Find the Command Realm \"CR\" in the lobby.","color":"dark_aqua","bold":false}},"parent":"custom/ride_dragon","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

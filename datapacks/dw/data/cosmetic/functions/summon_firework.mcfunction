@@ -1,0 +1,4 @@
+summon minecraft:firework_rocket ~3 ~ ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:3b,tag:{Fireworks:{Flight:1b,Explosions:[{Type:0b,Colors:[I; 8073150]}]}}},Life:6,LifeTime:30,Tags:["die"]}
+summon minecraft:firework_rocket ~-3 ~ ~ {FireworksItem:{id:"minecraft:firework_rocket",Count:3b,tag:{Fireworks:{Flight:1b,Explosions:[{Type:0b,Colors:[I; 8073150]}]}}},Life:6,LifeTime:30,Tags:["die"]}
+summon minecraft:firework_rocket ~ ~ ~3 {FireworksItem:{id:"minecraft:firework_rocket",Count:3b,tag:{Fireworks:{Flight:1b,Explosions:[{Type:0b,Colors:[I; 8073150]}]}}},Life:6,LifeTime:30,Tags:["die"]}
+summon minecraft:firework_rocket ~ ~ ~-3 {FireworksItem:{id:"minecraft:firework_rocket",Count:3b,tag:{Fireworks:{Flight:1b,Explosions:[{Type:0b,Colors:[I; 8073150]}]}}},Life:6,LifeTime:30,Tags:["die"]}

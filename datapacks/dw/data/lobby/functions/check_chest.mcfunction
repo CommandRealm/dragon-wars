@@ -1,0 +1,2 @@
+scoreboard players remove @e[type=area_effect_cloud,tag=lobby_chest,scores={lobby_refill=1..}] lobby_refill 1
+execute as @e[type=area_effect_cloud,tag=lobby_chest,scores={lobby_refill=0}] at @s run function lobby:chest_refill

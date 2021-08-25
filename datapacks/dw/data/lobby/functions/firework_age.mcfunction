@@ -1,0 +1,2 @@
+execute as @e[type=item,nbt={Item:{id:"minecraft:firework_rocket"}},tag=rocket_for_lobby] at @s store result score @s age run data get entity @s Age
+execute as @e[tag=rocket_for_lobby,type=item,scores={age=200..}] at @s run function lobby:firework_delay

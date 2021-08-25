@@ -1,0 +1,2 @@
+summon minecraft:potion ~3 ~ ~3 {Motion:[0.0d,1.5d,0.0d],Item:{id:"minecraft:splash_potion",Count:1b},Tags:["die"]}
+summon minecraft:potion ~-3 ~ ~-3 {Motion:[0.0d,1.5d,0.0d],Item:{id:"minecraft:splash_potion",Count:1b},Tags:["die"]}

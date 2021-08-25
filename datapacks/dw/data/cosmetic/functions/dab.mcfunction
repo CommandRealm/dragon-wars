@@ -1,0 +1,9 @@
+execute if entity @a[scores={celebration=89,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_left
+execute if entity @a[scores={celebration=79,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_right
+execute if entity @a[scores={celebration=69,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_left
+execute if entity @a[scores={celebration=59,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_right
+execute if entity @a[scores={celebration=49,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_left
+execute if entity @a[scores={celebration=39,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_right
+execute if entity @a[scores={celebration=29,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_left
+execute if entity @a[scores={celebration=19,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_right
+execute if entity @a[scores={celebration=9,celeb_number=15}] as @e[tag=cosmetic_dab,type=armor_stand] at @s run function cosmetic:dab_left

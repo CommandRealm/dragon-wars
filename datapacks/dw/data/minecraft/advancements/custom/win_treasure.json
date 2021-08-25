@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:diamond_block"},"title":{"text":"Secret Treasure?","color":"yellow","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Win a game of the \"Treasure\" mode.","color":"dark_purple","bold":false}},"parent":"custom/win_kills","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}
