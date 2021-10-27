@@ -22,6 +22,7 @@ scoreboard players set @s stats_flown 0
 scoreboard players set @s stats_flown_cm 0
 tag @s remove fakeplayer
 tag @s remove builder
+tag @s remove building
 scoreboard players set @s particle 0
 scoreboard players set @s celeb_number 0
 scoreboard players set @s sword 0
@@ -50,6 +51,7 @@ tag @s remove used_ninja
 tag @s remove used_lucky
 tag @s remove used_gladiator
 tag @s remove used_cactus
+tag @s remove used_jump_boost
 
 tag @s remove iron
 tag @s remove chain
@@ -57,3 +59,21 @@ tag @s remove ninja
 tag @s remove lucky
 tag @s remove gladiator
 tag @s remove spartan
+tag @s remove jump_boost
+
+function general:update_roles
+scoreboard players set @s prefix -1
+execute if entity @s[tag=has_cr] run scoreboard players set @s prefix 99
+execute if entity @s[tag=has_test] run scoreboard players set @s prefix 0
+execute if entity @s[tag=has_help] run scoreboard players set @s prefix 1
+execute if entity @s[tag=has_bld] run scoreboard players set @s prefix 2
+execute if entity @s[tag=has_prg] run scoreboard players set @s prefix 4
+execute if entity @s[tag=has_art] run scoreboard players set @s prefix 8
+execute if entity @s[tag=has_srbld] run scoreboard players set @s prefix 3
+execute if entity @s[tag=has_srprg] run scoreboard players set @s prefix 5
+
+execute if entity @s[tag=has_pc] run scoreboard players set @s prefix -2
+execute if entity @s[tag=has_melon] run scoreboard players set @s prefix -3
+
+execute if entity @s[tag=has_manager] run scoreboard players set @s prefix 6
+execute if entity @s[tag=has_lead] run scoreboard players set @s prefix 7

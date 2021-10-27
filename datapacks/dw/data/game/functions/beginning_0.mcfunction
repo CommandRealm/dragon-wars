@@ -11,10 +11,12 @@ execute if score $map map matches 9 run function game:map_spawn_9
 execute if score $map map matches 10 run function game:map_spawn_10
 execute if score $map map matches 11 run function game:map_spawn_11
 execute if score $map map matches 12 run function game:map_spawn_12
+execute if score $map map matches 13 run function game:map_spawn_13
+execute if score $map map matches 14 run function game:map_spawn_14
 execute if score $number mode matches 1..2 as @e[tag=spawn] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["die_soon","respawn_point"],Duration:100000}
 execute if score $number mode matches 1..2 as @e[tag=spawn] at @s run tp @e[tag=respawn_point,distance=..2,limit=1,sort=nearest] @s
 scoreboard players set @e[tag=firework] firework 1
-replaceitem entity @a[tag=playing] inventory.8 arrow 10
+item replace entity @a[tag=playing] inventory.8 with arrow 10
 execute as @a[tag=playing] at @s run playsound minecraft:block.anvil.place master @s ~ ~ ~ 100000 0.5
 title @a[tag=playing] subtitle {"text":"Deploy your elytra!","color":"gold","bold":true}
 effect clear @a[tag=playing]
@@ -66,8 +68,11 @@ execute as @r[tag=playing,tag=get_spawn] at @s run tp @s @e[tag=spawn,sort=rando
 execute as @e[tag=spawn] at @s run tag @a[distance=..1] remove get_spawn
 execute as @a[tag=playing] at @s run kill @e[tag=spawn,distance=..1]
 
+execute if entity @a[tag=playing,tag=get_spawn] run function game:add_more_spawnpoints
+
 execute as @e[tag=ice_capsule] at @s run fill ~ ~ ~ ~ ~ ~ air replace light_blue_stained_glass
-execute as @e[tag=ice_capsule,tag=set_grass_path] at @s run setblock ~ ~-1 ~ grass_path
+execute as @e[tag=ice_capsule,tag=set_dirt_path] at @s run setblock ~ ~-1 ~ dirt_path
+execute as @e[tag=ice_capsule,tag=set_water] at @s run setblock ~ ~ ~ water
 kill @e[tag=die]
 tag @e[tag=die_soon] add die
 tag @e[tag=die_soon] remove die_soon

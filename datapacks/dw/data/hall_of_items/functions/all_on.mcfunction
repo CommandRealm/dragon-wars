@@ -63,6 +63,20 @@ tag @p add toggle
 function hall_of_items:time_bomb
 tag @p add toggle
 function hall_of_items:levitation_blast
+
+tag @p add toggle
+function hall_of_items:death_scythe
+tag @p add toggle
+function hall_of_items:armor_breaker
+tag @p add toggle
+function hall_of_items:explosive_bow
+tag @p add toggle
+function hall_of_items:jump_boost_armor
+tag @p add toggle
+function hall_of_items:time_warp
+tag @p add toggle
+function hall_of_items:elytra_remover
+
 tag @s remove no_msg
 tag @s remove no_remove_msg
 tag @a remove toggle

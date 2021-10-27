@@ -1,2 +1,2 @@
 clear @s elytra
-replaceitem entity @s armor.chest elytra{HideFlags:63,KillOnDeath:1,Die:1,Unbreakable:1b,display:{Lore:['{"text":"A normal elytra.","italic":false,"color":"light_purple"}'],Name:'{"text":"Elytra","color":"light_purple","italic":false}'}}
+item replace entity @s armor.chest with elytra{HideFlags:63,KillOnDeath:1,Die:1,Unbreakable:1b,display:{Lore:['{"text":"A normal elytra.","italic":false,"color":"light_purple"}'],Name:'{"text":"Elytra","color":"light_purple","italic":false}'}}

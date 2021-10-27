@@ -8,7 +8,7 @@ scoreboard players operation $time timer_seconds = $time timer
 scoreboard players operation $time timer_seconds /= $20 number
 scoreboard players add $time timer_seconds 1
 execute if score $time timer matches 9900..10000 run function game:beginning
-execute unless score $time timer matches 9900.. as @a[tag=playing] at @s unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:elytra"}]}] run function game:get_elytra
+execute unless score $time timer matches 9900.. as @a[tag=playing] at @s unless score @s elytra matches 1.. unless entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run function game:get_elytra
 kill @e[type=item,nbt={Item:{tag:{Die:1}}}]
 execute as @a[tag=playing] at @s positioned ~ ~1 ~ as @e[type=item,nbt={Item:{tag:{Pickup:1}}},distance=..1] run data merge entity @s {PickupDelay:0}
 execute if score $number team matches 1 run function game:solo_check
@@ -46,6 +46,8 @@ execute unless score $time timer matches 9960.. if score $map map matches 9 as @
 execute unless score $time timer matches 9960.. if score $map map matches 10 as @a[tag=playing] at @s unless entity @s[x=8000,y=100,z=0,distance=..125] run tag @s add warning
 execute unless score $time timer matches 9960.. if score $map map matches 11 as @a[tag=playing] at @s unless entity @s[x=7000,y=100,z=0,distance=..125] run tag @s add warning
 execute unless score $time timer matches 9960.. if score $map map matches 12 as @a[tag=playing] at @s unless entity @s[x=14000,y=100,z=0,distance=..125] run tag @s add warning
+execute unless score $time timer matches 9960.. if score $map map matches 13 as @a[tag=playing] at @s unless entity @s[x=16000,y=100,z=0,distance=..125] run tag @s add warning
+execute unless score $time timer matches 9960.. if score $map map matches 14 as @a[tag=playing] at @s unless entity @s[x=15000,y=100,z=0,distance=..125] run tag @s add warning
 execute unless score $time timer matches 9960.. if entity @a[tag=warning] run function game:warning
 scoreboard players set @a[tag=!warning] warning -1
 

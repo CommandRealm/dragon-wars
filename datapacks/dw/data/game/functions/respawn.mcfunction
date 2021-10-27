@@ -10,6 +10,7 @@ tag @s remove ninja
 tag @s remove lucky
 tag @s remove spartan
 tag @s remove gladiator
+tag @s remove jump_boost
 scoreboard players set @s elytra 1
 tag @s add e_cooldown
 scoreboard players add @s rounds 0

@@ -1,4 +1,4 @@
 clear @s minecraft:knowledge_book
 kill @e[type=item,nbt={Item:{id:"minecraft:knowledge_book"}},distance=..5]
-replaceitem entity @s[tag=!building,scores={ready=0}] hotbar.4 knowledge_book{echest:1,Recipes:[{id:"minecraft:book"}],display:{Name:'[{"text":"Press ","color":"light_purple","bold":true,"italic":false},{"keybind":"key.use"},{"text":" to play!"}]'}}
-replaceitem entity @s[tag=!building,scores={ready=1}] hotbar.4 knowledge_book{echest:1,Recipes:[{id:"minecraft:book"}],display:{Name:'[{"text":"Press ","color":"white","bold":true,"italic":false},{"keybind":"key.use"},{"text":" to spectate!"}]'},Enchantments:[{id:"minecraft:easter_egg",lvl:1}]}
+item replace entity @s[scores={ready=0}] hotbar.4 with knowledge_book{not_clickable:1,Recipes:[],display:{Name:'[{"text":"Click","color":"light_purple","bold":true,"italic":false},{"text":" to ready up.","color":"dark_purple","bold":false}]',Lore:['[{"text":"Drop to reset your lobby position.","color":"gray","italic":false}]']}}
+item replace entity @s[scores={ready=1}] hotbar.4 with knowledge_book{not_clickable:1,Recipes:[],display:{Name:'[{"text":"Click","color":"white","bold":true,"italic":false},{"text":" to unready.","color":"gray","bold":false}]',Lore:['[{"text":"Drop to reset your lobby position.","color":"gray","italic":false}]']},Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],HideFlags:63}

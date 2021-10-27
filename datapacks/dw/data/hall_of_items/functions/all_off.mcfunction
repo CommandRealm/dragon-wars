@@ -32,5 +32,12 @@ function hall_of_items:shield
 function hall_of_items:tp_beam
 function hall_of_items:time_bomb
 function hall_of_items:levitation_blast
+
+function hall_of_items:death_scythe
+function hall_of_items:explosive_bow
+function hall_of_items:jump_boost_armor
+function hall_of_items:time_warp
+function hall_of_items:armor_breaker
+function hall_of_items:elytra_remover
 tag @a remove no_toggle
 tag @a[tag=!no_remove_msg] remove no_msg

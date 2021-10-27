@@ -1,3 +1,24 @@
+data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomNameVisible set value 0b
+setblock 0 68 7 air
+
+tag @a remove on_team
+tag @a remove on_red_team
+tag @a remove on_blue_team
+tag @a remove on_yellow_team
+tag @a remove on_green_team
+tag @a remove on_gray_team
+
+execute as @a[tag=playing,team=teams_red] at @s run function game:team_distribution/join_red
+execute as @a[tag=playing,team=teams_blue] at @s run function game:team_distribution/join_blue
+execute as @a[tag=playing,team=teams_yellow] at @s run function game:team_distribution/join_yellow
+execute as @a[tag=playing,team=teams_green] at @s run function game:team_distribution/join_green
+execute as @a[tag=playing,team=teams_gray] at @s run function game:team_distribution/join_gray
+execute if score $teams settings matches 2.. if entity @a[tag=playing,team=red] unless entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,tag=on_gray_team] as @r[tag=playing,team=red] at @s run function game:team_distribution/join_blue
+execute if score $teams settings matches 2.. if entity @a[tag=playing,team=blue] unless entity @a[tag=playing,team=red] unless entity @a[tag=playing,team=yellow] unless entity @a[tag=playing,team=green] unless entity @a[tag=playing,tag=on_gray_team] as @r[tag=playing,team=blue] at @s run function game:team_distribution/join_red
+
+execute if score $teams settings matches 2.. if entity @a[tag=playing,tag=!on_team] run function game:team_distribution/distribute
+
+
 execute as @r at @r if score $map map_select matches -1 run function game:random_map
 execute if score $number team matches 2.. run tellraw @a[scores={ready=0},team=!lobby,team=!test,team=!help,team=!bld,team=!prg,team=!srbld,team=!srprg,team=!lead,team=!true_gamer] {"text":"Due to the game beginning, you have left your team.","color":"gray"}
 execute as @a[scores={ready=0},team=!lobby,team=!test,team=!help,team=!bld,team=!prg,team=!srbld,team=!srprg,team=!lead,team=!true_gamer] at @s run function general:team
@@ -67,19 +88,21 @@ tag @a[tag=playing,team=gray] add join_gray
 scoreboard objectives remove team_kill
 scoreboard objectives add team_kill playerKillCount
 scoreboard players set BlocksInPlay: treasure 0
-execute if score $map map matches 0 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nAftermath","color":"gold"},{"text":"\n(Built by HippehWizard, Captain_Deadpool, FalconReign, and SmallDeemo.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 1 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nClockwork","color":"gold"},{"text":"\n(Built by Captain_Deadpool, ChipChase, TheRegularMex, HippehWizard, and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 0 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nAftermath","color":"gold"},{"text":"\n(Built by Connop, Captonium, FalconReign, and SmallDeemo.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 1 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nClockwork","color":"gold"},{"text":"\n(Built by Captonium, ChipChase, TheRegularMex, Connop, and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
 execute if score $map map matches 2 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nSleet","color":"gold"},{"text":"\n(Built by CheckMC, TheRangerMark, ChipChase, Bodi25, and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 3 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nDesolate","color":"gold"},{"text":"\n(Built by FalconReign, Captain_Deadpool, SmallDeemo, TheRangerMark, CheckMC, and ChipChase.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 3 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nDesolate","color":"gold"},{"text":"\n(Built by FalconReign, Captonium, SmallDeemo, TheRangerMark, CheckMC, and ChipChase.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
 execute if score $map map matches 4 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nGraviton","color":"gold"},{"text":"\n(Built by Bodi25 and TheRangerMark.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 5 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nImmemorial","color":"gold"},{"text":"\n(Built by tinaaaa420, Bodi25, and HippehWizard.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 6 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nMycology","color":"gold"},{"text":"\n(Built by TheRegularMex, TheTypicalMex, FalconReign, HippehWizard, CheckMC, and Captain_Deadpool.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 7 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nSkyline","color":"gold"},{"text":"\n(Built by TheRegularMex, HippehWizard, Captain_Deadpool, TheTypicalMex, CheckMC, FalconReign, and SmallDeemo.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 8 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nDynasty","color":"gold"},{"text":"\n(Built by SmallDeemo, II_Owen_II, TheRegularMex, Captain_Deadpool, HippehWizard, FalconReign, TheTypicalMex, tinaaaa420, and ChipChase.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 9 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nAquatic","color":"gold"},{"text":"\n(Built by Bodi25, CheckMC, HippehWizard, and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 10 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nHelios","color":"gold"},{"text":"\n(Built by ChipChase, TheRegularMex, Bodi25, J70, FalconReign, HippehWizard, and CheckMC.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
-execute if score $map map matches 11 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nScorched","color":"gold"},{"text":"\n(Built by J70, HippehWizard, FalconReign, CheckMC, ChipChase, TheRegularMex, and Calverin.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 5 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nImmemorial","color":"gold"},{"text":"\n(Built by tinaaaa420, Bodi25, and Connop.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 6 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nMycology","color":"gold"},{"text":"\n(Built by TheRegularMex, TheTypicalMex, FalconReign, Connop, CheckMC, and Captonium.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 7 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nSkyline","color":"gold"},{"text":"\n(Built by TheRegularMex, Connop, Captonium, TheTypicalMex, CheckMC, FalconReign, and SmallDeemo.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 8 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nDynasty","color":"gold"},{"text":"\n(Built by SmallDeemo, II_Owen_II, TheRegularMex, Captonium, Connop, FalconReign, TheTypicalMex, tinaaaa420, and ChipChase.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 9 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nAquatic","color":"gold"},{"text":"\n(Built by Bodi25, CheckMC, Connop, and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 10 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nHelios","color":"gold"},{"text":"\n(Built by ChipChase, TheRegularMex, Bodi25, J70, FalconReign, Connop, and CheckMC.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 11 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nScorched","color":"gold"},{"text":"\n(Built by J70, Connop, FalconReign, CheckMC, ChipChase, TheRegularMex, and Calverin.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
 execute if score $map map matches 12 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nExtraterrestrial","color":"gold"},{"text":"\n(Built by FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 13 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nMarooned","color":"gold"},{"text":"\n(Built by Captonium, Connop, SmallDeemo, CheckMC, and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
+execute if score $map map matches 14 run tellraw @a[tag=playing] [{"text":"-----------------------------------------------------","color":"dark_purple"},{"text":"\nLuminosity ","color":"gold"},{"text":"\n(Built by Connop and FalconReign.)","color":"dark_aqua","italic":true},{"text":"\n-----------------------------------------------------","color":"dark_purple","italic":false}]
 
 
 execute if score $number team matches 2.. run tellraw @a[tag=playing,team=red] [{"text":"You are on RED TEAM!","color":"dark_red"},{"text":" Your team: ","color":"dark_red"},{"selector":"@a[team=red]"}]
@@ -94,3 +117,12 @@ tellraw @a[x=-1000,y=66,z=0,distance=..500,tag=!playing] {"text":"Please wait he
 tp @a[x=-1000,y=66,z=0,distance=..500,tag=!playing] 0 66 0 0 -20
 scoreboard players set @a[tag=!playing] gliding 0
 kill @e[type=ender_dragon]
+
+
+
+
+
+# id
+scoreboard objectives remove id
+scoreboard objectives add id dummy
+scoreboard players set $id id 0

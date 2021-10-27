@@ -23,7 +23,7 @@ execute if score $rand brew_random matches 8 run effect give @s levitation 10 7
 execute if score $rand brew_random matches 8 run tellraw @s {"text":"You have received levitation!","color":"gold"}
 execute if score $rand brew_random matches 8 run tag @s[scores={elytra=0}] add e_cooldown
 execute if score $rand brew_random matches 8 run scoreboard players add @s[scores={elytra=0}] elytra 1
-execute if score $rand brew_random matches 8 run replaceitem entity @s armor.chest air
+execute if score $rand brew_random matches 8 run item replace entity @s armor.chest with air
 execute if score $rand brew_random matches 9 run effect give @s luck 30 0
 execute if score $rand brew_random matches 9 run tellraw @s {"text":"You have received luck!","color":"gold"}
 execute if score $rand brew_random matches 10 run effect give @s resistance 15 0

@@ -44,3 +44,9 @@ execute as @e[type=firework_rocket,x=0,y=66,z=0,distance=..400,nbt={Life:10}] at
 advancement grant @a[x=-54,y=51,z=65,dx=160,dy=60,dz=150,nbt={OnGround:1b}] only minecraft:custom/ride_dragon
 advancement grant @a[x=13,y=44,z=-100,distance=..8] only minecraft:custom/find_cr
 
+# drop ready book
+execute as @a[x=0,y=66,z=0,distance=..500,scores={drop_ready_book=1..}] at @s run function lobby:drop_ready_book
+
+# particles
+
+execute at @a[x=0,y=66,z=0,distance=.500] run particle minecraft:ash ~ ~ ~ 15 15 15 0.25 20 normal @s

@@ -3,7 +3,7 @@ advancement grant @a[scores={kill=1..,gliding=1..},tag=playing] only minecraft:c
 execute as @a[scores={kill=1..},tag=playing] at @s at @s[y=5,distance=..10,gamemode=adventure] run advancement grant @s only minecraft:custom/get_a_kill_near_void
 execute as @a[scores={kill=1..},tag=playing] at @s if entity @s[nbt={Inventory:[{id:"minecraft:arrow",Slot:17b}]}] run give @s arrow 5
 execute as @a[scores={kill=1..},tag=playing] at @s unless entity @s[nbt={Inventory:[{id:"minecraft:arrow",Slot:17b}]}] run tag @s add give_arrows
-execute as @a[scores={kill=1..},tag=playing] at @s unless entity @s[nbt={Inventory:[{id:"minecraft:arrow",Slot:17b}]}] run replaceitem entity @s inventory.8 arrow
+execute as @a[scores={kill=1..},tag=playing] at @s unless entity @s[nbt={Inventory:[{id:"minecraft:arrow",Slot:17b}]}] run item replace entity @s inventory.8 with arrow
 execute as @a[scores={kill=1..},tag=playing,tag=give_arrows] at @s run give @s arrow 4
 tag @a remove give_arrows
 effect give @a[scores={kill=1..,axe_dealt=1..},tag=playing,nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] regeneration 1 255 true

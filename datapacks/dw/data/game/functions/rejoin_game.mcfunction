@@ -14,6 +14,8 @@ execute if score $map map matches 9 run spawnpoint @a[tag=playing] 12000 125 0
 execute if score $map map matches 10 run spawnpoint @a[tag=playing] 8000 125 0
 execute if score $map map matches 11 run spawnpoint @a[tag=playing] 7000 125 0
 execute if score $map map matches 12 run spawnpoint @a[tag=playing] 14000 125 0
+execute if score $map map matches 13 run spawnpoint @a[tag=playing] 16000 125 0
+execute if score $map map matches 14 run spawnpoint @a[tag=playing] 15000 125 0
 execute if score $number mode matches 1..2 if score $number team matches 1 run team join game
 execute if score $number team matches 2.. if score $number mode matches 1..2 run team join red
 execute if score $number team matches 2.. run tag @s add join_red

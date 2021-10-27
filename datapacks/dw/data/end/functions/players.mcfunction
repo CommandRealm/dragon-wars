@@ -1,5 +1,4 @@
-scoreboard players set @a ready 0
-execute if score $number auto_ready matches 1 run scoreboard players set @a[tag=playing,team=!spectator] ready 1
+scoreboard players set @a ready 1
 execute as @a[tag=playing] at @s run function general:team
 title @a[tag=playing] times 0 20 5
 tag @a[team=spectator] add playing
@@ -19,7 +18,8 @@ spawnpoint @a[tag=playing] 0 66 0
 scoreboard players set $game state 0
 xp set @a 0 levels
 execute as @e[tag=ice_capsule] at @s run fill ~ ~ ~ ~ ~ ~ air replace light_blue_stained_glass
-execute as @e[tag=ice_capsule,tag=set_grass_path] at @s run setblock ~ ~-1 ~ grass_path
+execute as @e[tag=ice_capsule,tag=set_dirt_path] at @s run setblock ~ ~-1 ~ dirt_path
+execute as @e[tag=ice_capsule,tag=set_water] at @s run setblock ~ ~ ~ water
 kill @e[tag=die]
 scoreboard players set $time cooldown 0
 bossbar remove minecraft:refill
@@ -33,12 +33,16 @@ tag @a[tag=playing] remove ninja
 tag @a[tag=playing] remove lucky
 tag @a[tag=playing] remove spartan
 tag @a[tag=playing] remove gladiator
+tag @a[tag=playing] remove jump_boost
 
 scoreboard players reset @a[tag=playing] armor_delay
 
 scoreboard players set @a elytra 0
 
 
-
+execute as @a at @s run attribute @s generic.max_health base set 20
 
 tag @a[tag=playing] remove playing
+
+schedule function end:update_start_button 2t
+

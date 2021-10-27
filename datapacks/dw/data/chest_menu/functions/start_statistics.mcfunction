@@ -1,7 +1,7 @@
 scoreboard players operation @s stats_flown = @s stats_flown_cm
 scoreboard players operation @s stats_flown /= $100 number
 function chest_menu:clear
-replaceitem entity @s enderchest.18 barrier{KillWhenDropped:1,display:{Name:'{"text":"Back","color":"red","italic":false}'}}
+item replace entity @s enderchest.18 with barrier{KillWhenDropped:1,display:{Name:'{"text":"Back","color":"red","italic":false}'}}
 
 loot replace entity @s enderchest.11 loot minecraft:wins
 loot replace entity @s enderchest.12 loot minecraft:played

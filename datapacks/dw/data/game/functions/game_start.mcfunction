@@ -17,7 +17,7 @@ scoreboard objectives setdisplay sidebar
 tag @a remove no_elytra
 execute as @a[tag=playing] at @s run function cosmetic:sword
 give @a[tag=playing] bow{HideFlags:63,KillOnDeath:1,Unbreakable:1b,display:{Lore:['{"text":"A normal bow.","italic":false,"color":"red"}'],Name:'{"text":"Bow","color":"red","italic":false}'}}
-replaceitem entity @a[tag=playing] armor.head dragon_head{KillOnDeath:1,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],HideFlags:63,display:{Lore:['{"text":"The head of a dragon.","italic":false,"color":"dark_purple"}'],Name:'{"text":"Dragon Head","color":"dark_purple","italic":false}'}}
+item replace entity @a[tag=playing] armor.head with dragon_head{KillOnDeath:1,Enchantments:[{id:"minecraft:binding_curse",lvl:1}],HideFlags:63,display:{Lore:['{"text":"The head of a dragon.","italic":false,"color":"dark_purple"}'],Name:'{"text":"Dragon Head","color":"dark_purple","italic":false}'}}
 scoreboard players reset @a death
 execute if score $number team matches 1 run team join game @a[tag=playing]
 effect give @a[tag=playing] regeneration 1 255 true
@@ -45,6 +45,7 @@ tag @a remove ninja
 tag @a remove lucky
 tag @a remove spartan
 tag @a remove gladiator
+tag @a remove jump_boost
 scoreboard players set @a axe_dealt 0
 scoreboard players set @a crouch 0
 scoreboard players set @a drop_brew 0
@@ -67,7 +68,7 @@ scoreboard players set $time chest_refill_t 100
 scoreboard players set $time firework_second 20
 scoreboard players set @a l_firework 0
 scoreboard players reset @a armor_delay
-replaceitem entity @a[tag=!playing,gamemode=adventure] hotbar.4 air
+item replace entity @a[tag=!playing,gamemode=adventure] hotbar.4 with air
 
 scoreboard players operation $time treasure_time = $time treasure_spawn
 scoreboard players set $block treasure_time 5
@@ -82,6 +83,13 @@ tag @a remove hunger
 stopsound @a * minecraft:music_disc.cat
 scoreboard players set $time game_end 18000
 
+advancement revoke @a only game:hit_by_armor_breaker
+
+tag @a remove has_death_scythe
+
+execute as @a at @s run attribute @s generic.max_health base set 20
+scoreboard players reset @a shoot_bow
+
 execute if score $map map matches 0 run tag @a[tag=playing] add played_on_map_0
 execute if score $map map matches 1 run tag @a[tag=playing] add played_on_map_1
 execute if score $map map matches 2 run tag @a[tag=playing] add played_on_map_2
@@ -95,6 +103,8 @@ execute if score $map map matches 9 run tag @a[tag=playing] add played_on_map_9
 execute if score $map map matches 10 run tag @a[tag=playing] add played_on_map_10
 execute if score $map map matches 11 run tag @a[tag=playing] add played_on_map_11
 execute if score $map map matches 12 run tag @a[tag=playing] add played_on_map_12
-advancement grant @a[tag=playing,tag=played_on_map_0,tag=played_on_map_1,tag=played_on_map_2,tag=played_on_map_3,tag=played_on_map_4,tag=played_on_map_5,tag=played_on_map_6,tag=played_on_map_7,tag=played_on_map_8,tag=played_on_map_9,tag=played_on_map_10,tag=played_on_map_11,tag=played_on_map_12] only minecraft:custom/play_on_every_map
+execute if score $map map matches 13 run tag @a[tag=playing] add played_on_map_13
+execute if score $map map matches 14 run tag @a[tag=playing] add played_on_map_14
+advancement grant @a[tag=playing,tag=played_on_map_0,tag=played_on_map_1,tag=played_on_map_2,tag=played_on_map_3,tag=played_on_map_4,tag=played_on_map_5,tag=played_on_map_6,tag=played_on_map_7,tag=played_on_map_8,tag=played_on_map_9,tag=played_on_map_10,tag=played_on_map_11,tag=played_on_map_12,tag=played_on_map_13,tag=played_on_map_14] only minecraft:custom/play_on_every_map
 advancement grant @a[advancements={custom/unlock_celebration=false,custom/play_game=true,custom/win_rounds=true,custom/win_kills=true,custom/win_treasure=true,custom/win_teams=true,custom/win_five_games=true,custom/win_ten_games=true,custom/play_on_every_map=true}] only minecraft:custom/unlock_celebration
 advancement grant @a[tag=playing] only minecraft:custom/play_game

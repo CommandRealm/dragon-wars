@@ -1,3 +1,6 @@
+kill @e[type=item,nbt={Item:{tag:{Treasure:1}}}]
+execute at @r[tag=playing] run kill @e[type=item,nbt={Item:{id:"minecraft:firework_rocket"}},distance=..600]
+
 scoreboard players reset @a[tag=playing] l_blast_timer
 execute if score $time timer matches 9960 run title @a[tag=playing] times 0 20 5
 execute if score $time timer matches 9960 run title @a[tag=playing] title {"text":"- = - 3 - = -","color":"dark_purple","bold":true}

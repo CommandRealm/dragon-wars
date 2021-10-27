@@ -1,9 +1,9 @@
 function chest_menu:clear
-replaceitem entity @s enderchest.18 barrier{KillWhenDropped:1,display:{Name:'{"text":"Back","color":"red","italic":false}'}}
-replaceitem entity @s enderchest.10 beetroot_seeds{KillWhenDropped:1,display:{Name:'{"text":"Boost Particles","color":"yellow","italic":false,"bold":true}'}}
-replaceitem entity @s enderchest.12 stone_sword{KillWhenDropped:1,display:{Name:'{"text":"Custom Sword Names","color":"gray","italic":false,"bold":true}'}}
-replaceitem entity @s enderchest.14 diamond{KillWhenDropped:1,display:{Name:'{"text":"Celebrations","color":"aqua","italic":false,"bold":true}'}}
-replaceitem entity @s enderchest.16 gold_nugget{KillWhenDropped:1,display:{Name:'{"text":"Advancement Unlocks","color":"gold","italic":false,"bold":true}'}}
+item replace entity @s enderchest.18 with barrier{KillWhenDropped:1,display:{Name:'{"text":"Back","color":"red","italic":false}'}}
+item replace entity @s enderchest.10 with beetroot_seeds{KillWhenDropped:1,display:{Name:'{"text":"Boost Particles","color":"yellow","italic":false,"bold":true}'}}
+item replace entity @s enderchest.12 with stone_sword{KillWhenDropped:1,display:{Name:'{"text":"Custom Sword Names","color":"gray","italic":false,"bold":true}'}}
+item replace entity @s enderchest.14 with diamond{KillWhenDropped:1,display:{Name:'{"text":"Celebrations","color":"aqua","italic":false,"bold":true}'}}
+item replace entity @s enderchest.16 with gold_nugget{KillWhenDropped:1,display:{Name:'{"text":"Advancement Unlocks","color":"gold","italic":false,"bold":true}'}}
 
 scoreboard players set @s menu 3
 scoreboard players set @s click_1 0

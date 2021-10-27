@@ -28,4 +28,16 @@ execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distan
 execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:feather"}}] run tellraw @s {"text":"Tornado Jump - Drop to gain levitation for 1 second.","color":"white"}
 execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:chiseled_polished_blackstone"}}] run tellraw @s {"text":"Time Bomb - Drop to set a timed bomb.","color":"dark_gray"}
 execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:end_crystal"}}] run tellraw @s {"text":"Levitation Blast - Drop to gain levitation before shooting a laser.","color":"#f9baff"}
+
+
+
+
+
+execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:netherite_hoe"}}] run tellraw @s [{"text":"Death ","color":"dark_gray"},{"text":"Scythe - A powerful melee weapon that lowers the user's max health when this item is in their inventory.","color":"gray"}]
+execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:iron_pickaxe"}}] run tellraw @s [{"text":"Armor ","color":"gray"},{"text":"Breaker - A weapon that breaks the armor of any player it hits.","color":"gold"}]
+execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:bow",tag:{explosive_bow:1}}}] run tellraw @s [{"text":"Explosive ","color":"red"},{"text":"Bow - A bow that explodes when it hits a player. Each shot uses up three arrows.","color":"gray"}]
+execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,tag=jump_boost_armor] run tellraw @s [{"text":"Leaping ","color":"green"},{"text":"Armor - Drop to equip leather armor that grants jump boost.","color":"gray"}]
+execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:clock"}}] run tellraw @s [{"text":"Time ","color":"gold"},{"text":"Warp - Drop to warp to your position three seconds ago.","color":"dark_purple"}]
+execute at @e[type=item,tag=item_model,sort=nearest,limit=1] if entity @e[distance=..1,nbt={Item:{id:"minecraft:snowball"}}] run tellraw @s [{"text":"Firework ","color":"gray"},{"text":"Remover - Clears fireworks from players near the projectile.","color":"dark_red"}]
+
 playsound minecraft:block.note_block.harp master @s ~ ~ ~ 100 2

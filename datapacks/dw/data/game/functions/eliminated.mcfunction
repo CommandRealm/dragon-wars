@@ -6,3 +6,7 @@ execute if entity @a[scores={death=1..}] run kill @e[type=item,nbt={Item:{tag:{K
 kill @e[type=experience_orb]
 tag @a[scores={death=1..}] remove warning
 scoreboard players set @a[scores={death=1..}] l_blast_timer 0
+
+# removing advancement
+advancement revoke @a[scores={death=1..}] only game:hit_by_armor_breaker
+advancement revoke @a[scores={death=1..}] only game:hit_by_explosive_arrow

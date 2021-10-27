@@ -17,7 +17,7 @@ team modify true_gamer color light_purple
 team modify test prefix {"text":"(Tester) ","color":"light_purple"}
 team modify help prefix {"text":"[Helper] ","color":"dark_purple"}
 team modify bld prefix {"text":"{Builder} ","color":"blue"}
-team modify prg prefix {"text":"{Programmer} ","color":"blue"}
+team modify prg prefix {"text":"{Programmer} ","color":"red"}
 team modify srbld prefix {"text":"{Sr. Builder} ","color":"dark_blue"}
 team modify srprg prefix {"text":"{Sr. Programmer} ","color":"dark_red"}
 team modify true_gamer prefix [{"text":"(","color":"dark_green","bold":true},{"text":"The True Gamer","color":"green","bold":false},{"text":") ","color":"dark_green","bold":true}]
@@ -222,13 +222,13 @@ scoreboard objectives add back_to_lobby trigger
 scoreboard objectives add item_hall_tp dummy
 kill @e[type=area_effect_cloud,tag=item_hall_tp]
 summon area_effect_cloud -7 68.5 43 {Duration:1000000,Tags:["item_hall_tp","lobby_ih_tp"]}
-summon area_effect_cloud -1000 63 -52 {Duration:1000000,Tags:["item_hall_tp","ih_tp"]}
+summon area_effect_cloud -1000 63 -60 {Duration:1000000,Tags:["item_hall_tp","ih_tp"]}
 summon area_effect_cloud -1000 62 8 {Duration:1000000,Tags:["item_hall_tp","ih_tp"]}
 scoreboard players set @e[tag=item_hall_tp] item_hall_tp 0
 kill @e[tag=floating_nameplate]
 summon armor_stand -7 71 43 {Invisible:1,Invulnerable:1,Marker:1b,NoGravity:1b,CustomName:'{"text":"Item Hall","color":"yellow","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
-summon armor_stand 0 69 9 {Invisible:1,Invulnerable:1,Marker:1b,NoGravity:1b,CustomName:'{"text":"Menu","color":"dark_purple","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
-summon armor_stand -1000 65 -52 {Invisible:1,Invulnerable:1,Marker:1b,NoGravity:1b,CustomName:'{"text":"Lobby","color":"light_purple","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
+summon armor_stand 4 67 8 {Invisible:1,Invulnerable:1,Marker:1b,NoGravity:1b,CustomName:'{"text":"Menu","color":"dark_purple","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
+summon armor_stand -1000 65 -60 {Invisible:1,Invulnerable:1,Marker:1b,NoGravity:1b,CustomName:'{"text":"Lobby","color":"light_purple","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
 summon armor_stand -1000 64 8 {Invisible:1,Invulnerable:1,Marker:1b,NoGravity:1b,CustomName:'{"text":"Lobby","color":"light_purple","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
 summon armor_stand 13 69 -6 {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,CustomName:'{"text":"Elytra Pad","color":"dark_aqua","underlined":true}',Tags:["floating_nameplate"],CustomNameVisible:1b}
 setblock -1002 62 -8 air
@@ -247,7 +247,6 @@ scoreboard objectives add stats_wins dummy
 scoreboard objectives add stats_played dummy
 scoreboard objectives add stats_kills playerKillCount
 scoreboard objectives add stats_deaths deathCount
-scoreboard objectives add stats_kd
 scoreboard objectives add stats_wins dummy
 scoreboard objectives remove stats_flown
 scoreboard objectives add stats_flown_cm minecraft.custom:minecraft.aviate_one_cm
@@ -257,7 +256,7 @@ gamerule sendCommandFeedback false
 scoreboard objectives add rand_cosmetic dummy
 scoreboard objectives add resetting dummy
 scoreboard objectives add random_map dummy
-scoreboard players set $mod random_map 13
+scoreboard players set $mod random_map 15
 scoreboard objectives add game_end dummy
 scoreboard players set $100 number 100
 scoreboard objectives add death_msg dummy
@@ -283,3 +282,38 @@ scoreboard objectives add l_blast_timer dummy
 scoreboard objectives add gliding minecraft.custom:minecraft.aviate_one_cm
 scoreboard objectives add random_loot_t dummy
 scoreboard players set $mod random_loot_t 7
+
+scoreboard objectives add pregame dummy
+
+gamerule doTileDrops false
+
+kill @e[type=area_effect_cloud,tag=start_button_text]
+summon minecraft:area_effect_cloud 0 69.0 8 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["start_button_text"],CustomName:'[{"text":"- ","color":"gray"},{"text":"🗡","color":"light_purple","bold":true},{"text":" Start ","color":"dark_purple"},{"text":"🗡","color":"light_purple","bold":true},{"text":" -","color":"gray"}]',CustomNameVisible:1b}
+
+scoreboard objectives add prefix dummy
+
+team add cr
+team modify cr color light_purple
+team modify cr prefix [{"text":"{","color":"white","bold":true},{"text":"C","color":"aqua","bold":true},{"text":"R","color":"dark_aqua","bold":true},{"text":"} ","color":"white","bold":true}]
+
+
+team add manager
+team modify manager color light_purple
+team modify manager prefix {"text":"{Manager} ","color":"yellow"}
+
+scoreboard objectives add drop_ready_book minecraft.dropped:minecraft.knowledge_book
+
+
+scoreboard objectives add shoot_bow minecraft.used:minecraft.bow
+
+scoreboard objectives add age dummy
+
+scoreboard objectives add drop_clock minecraft.dropped:minecraft.clock
+
+scoreboard objectives add throw_snowball minecraft.used:minecraft.snowball
+
+scoreboard objectives add calculate dummy
+
+scoreboard objectives add throw_egg minecraft.used:minecraft.egg
+
+gamerule maxEntityCramming 100000

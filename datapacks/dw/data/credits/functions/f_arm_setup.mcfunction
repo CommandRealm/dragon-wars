@@ -6,9 +6,9 @@ scoreboard objectives add pld dummy
 scoreboard objectives add pld2 dummy
 scoreboard players set direction pld 1
 data merge entity @e[tag=pl,limit=1] {Pose:{RightArm:[-30.0f,20.0f,55.0f],LeftArm:[-70.0f,30.0f,-100.0f]}}
-replaceitem entity @e[tag=pl] armor.feet iron_boots
-replaceitem entity @e[tag=pl] armor.chest leather_chestplate{display:{color:327737}}
-replaceitem entity @e[tag=pl] armor.legs iron_leggings
+item replace entity @e[tag=pl] armor.feet with iron_boots
+item replace entity @e[tag=pl] armor.chest with leather_chestplate{display:{color:327737}}
+item replace entity @e[tag=pl] armor.legs with iron_leggings
 kill @e[tag=falcon_elytra]
 execute at @e[tag=pl] run summon armor_stand ~ ~ ~ {Tags:["credit_elytra","falcon_elytra"],NoBasePlate:1,ShowArms:0,NoGravity:1,Invulnerable:1,Marker:1,ArmorItems:[{},{},{id:"minecraft:elytra",Count:1b},{}]}
 tp @e[tag=falcon_elytra] @e[tag=pl,limit=1]

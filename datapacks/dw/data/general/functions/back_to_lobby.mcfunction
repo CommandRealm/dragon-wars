@@ -15,6 +15,7 @@ tag @s remove ninja
 tag @s remove lucky
 tag @s remove spartan
 tag @s remove gladiator
+tag @a remove jump_boost
 scoreboard players set @s elytra 0
 scoreboard players enable @s select_team
 execute unless score $game state matches 1.. run function lobby:get_book

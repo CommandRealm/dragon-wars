@@ -1,0 +1,3 @@
+setblock 0 68 7 minecraft:stone_button[face=wall,facing=north,powered=false]
+data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomNameVisible set value 1b
+data modify entity @e[type=area_effect_cloud,tag=start_button_text,limit=1] CustomName set value '[{"text":"- ","color":"gray"},{"text":"🗡","color":"light_purple","bold":true},{"text":" Start ","color":"dark_purple"},{"text":"🗡","color":"light_purple","bold":true},{"text":" -","color":"gray"}]'

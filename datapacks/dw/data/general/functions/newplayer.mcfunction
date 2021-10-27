@@ -1,7 +1,7 @@
 tag @s remove i_move
 gamemode adventure @s
 tp @s 0 66 0 0 -20
-function general:team
+
 clear @s
 tag @s add i_move
 execute as @a at @s run playsound minecraft:entity.ender_dragon.hurt master @s ~ ~ ~ 1 2
@@ -10,7 +10,7 @@ scoreboard players set @s i_sprint 0
 scoreboard players set @s i_crouch 0
 scoreboard players set @s intro -100
 title @s times 0 70 10
-scoreboard players set @s ready 0
+scoreboard players set @s ready 1
 scoreboard players set @s leave 0
 tag @s remove playing
 effect clear @s
@@ -25,6 +25,7 @@ tag @s remove ninja
 tag @s remove lucky
 tag @s remove spartan
 tag @s remove gladiator
+tag @s remove jump_boost
 scoreboard players set @s elytra 0
 scoreboard players enable @s select_team
 execute unless score $game state matches 1.. run function lobby:get_book
@@ -51,3 +52,5 @@ scoreboard players reset @s kills
 scoreboard players reset @s treasure
 scoreboard players set @s tnt_cooldown 0
 tag @s remove won_treasure_mode
+
+function general:team

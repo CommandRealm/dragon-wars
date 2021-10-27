@@ -1,53 +1,25 @@
-tag FalconReign add srprg
-tag HippehWizard add srbld
-tag TheRangerMark add bld
-tag SmallDeemo add bld
-tag Captain_Deadpool add bld
-tag CheckMC add bld
-tag ChipChase add bld
-tag Bodi25 add bld
-tag Nxmes remove bld
-tag Nxmes add test
-tag TheRegularMex add bld
-tag Arrgs add test
-tag TheTypicalMex add help
-tag PurpleSimp add test
-tag tinaaaa420 add bld
-tag II_Owen_II add help
-tag GeneralGuy64 add test
-tag VoidGolem add test
-tag Calverin add help
-tag Focii_ add help
-tag physa add test
-tag GoldSlimeling91 add test
-tag J70 add bld
-tag CoolCheeto2 add test
-tag Leesobee add test
-tag endermint06 add test
-tag T_Man_Happy add test
-tag Theluco617 add test
-tag Peeps__ add test
-tag ZachEP add test
-tag berglerr add test
-tag NauticaElements add test
-tag BelenDrane add test
-tag Warrior0120 add test
-tag gaysaregreat add test
-tag OPWolf2323 add test
-tag EpicStar123 add test
-tag Business_Pug add test
-tag Cosmic_Evil add test
-tag CrazyPig19 add test
-tag matthoff8 add test
-tag Pulluxx add test
-tag Moesh add test
-tag pcgus add test
-tag FlameAndDiamond add test
-team join lobby @s
-team join test @s[tag=test]
-team join help @s[tag=help]
-team join bld @s[tag=bld]
-team join prg @s[tag=prg]
-team join srbld @s[tag=srbld]
-team join srprg @s[tag=srprg]
-team join true_gamer @s[tag=true_gamer]
+
+team join pc_role @s[scores={prefix=-2}]
+team join melon @s[scores={prefix=-3}]
+
+team join lobby @s[scores={prefix=-1}]
+team join test @s[scores={prefix=0}]
+team join help @s[scores={prefix=1}]
+team join bld @s[scores={prefix=2}]
+team join srbld @s[scores={prefix=3}]
+team join prg @s[scores={prefix=4}]
+
+team join srprg @s[scores={prefix=5}]
+team join manager @s[scores={prefix=6}]
+
+team join lead @s[scores={prefix=7}]
+
+team join art @s[scores={prefix=8}]
+
+
+team join cr @s[scores={prefix=99}]
+
+team join tournament @s[scores={prefix=98}]
+
+
+team join prefix @s[tag=prefix]

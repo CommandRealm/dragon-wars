@@ -24,6 +24,10 @@ execute if score $map map matches 11 run tp @s 7000 125 0 0 0
 execute if score $map map matches 11 run spawnpoint @a[tag=playing] 7000 125 0
 execute if score $map map matches 12 run tp @s 14000 125 0 0 0
 execute if score $map map matches 12 run spawnpoint @a[tag=playing] 14000 125 0
+execute if score $map map matches 13 run tp @s 16000 125 0 0 0
+execute if score $map map matches 13 run spawnpoint @a[tag=playing] 16000 125 0
+execute if score $map map matches 14 run tp @s 15000 125 0 0 0
+execute if score $map map matches 14 run spawnpoint @a[tag=playing] 15000 125 0
 
 execute as @s[gamemode=spectator,tag=!no_leave_map_msg] at @s unless entity @a[tag=playing,gamemode=!spectator,distance=..5] run tellraw @s[gamemode=spectator,tag=!no_leave_map_msg] {"text":"Please stay and watch the game.","color":"red"}
 execute as @s[gamemode=spectator,tag=!no_leave_map_msg] at @s unless entity @a[tag=playing,gamemode=!spectator,distance=..5] run playsound minecraft:block.note_block.didgeridoo master @s ~ ~ ~ 100 1
