@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:light_blue_stained_glass"},"title":{"text":"Rookie Aviator","color":"aqua","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Step on the \"Equip Elytra\" pad.","color":"#98fff2","bold":false}},"parent":"custom/root","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

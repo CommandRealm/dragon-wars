@@ -1,0 +1,80 @@
+{
+  "world_version": "1.18.1",
+  "whitelist": {
+    "enabled": false,
+    "players": []
+  },
+  "ops": {
+    "store": false,
+    "players": []
+  },
+  "bans": {
+    "store": false,
+    "ips": [],
+    "accounts": []
+  },
+  "properties": {
+    "motd": "",
+    "gamemode": "survival",
+    "level-type": "default",
+    "level-seed": "",
+    "generate-structures": "true",
+    "generator-settings": "",
+    "enable-command-block": "true",
+    "difficulty": "normal",
+    "pvp": "true",
+    "allow-nether": "true",
+    "resource-pack": "",
+    "resource-pack-sha1": "",
+    "max-players": "48",
+    "entity-broadcast-range-percentage": "100",
+    "hardcore": "false",
+    "spawn-npcs": "true",
+    "spawn-monsters": "true",
+    "spawn-animals": "true",
+    "view-distance": "12",
+    "allow-flight": "true"
+  },
+  "gamerules": {
+    "doFireTick": "false",
+    "maxCommandChainLength": "65536",
+    "fireDamage": "true",
+    "reducedDebugInfo": "true",
+    "disableElytraMovementCheck": "false",
+    "announceAdvancements": "true",
+    "drowningDamage": "true",
+    "commandBlockOutput": "false",
+    "forgiveDeadPlayers": "true",
+    "doMobSpawning": "false",
+    "maxEntityCramming": "100000",
+    "disableRaids": "false",
+    "doWeatherCycle": "true",
+    "doDaylightCycle": "false",
+    "showDeathMessages": "true",
+    "doTileDrops": "false",
+    "universalAnger": "false",
+    "playersSleepingPercentage": "100",
+    "doInsomnia": "true",
+    "doImmediateRespawn": "true",
+    "naturalRegeneration": "true",
+    "doMobLoot": "false",
+    "fallDamage": "false",
+    "keepInventory": "true",
+    "doEntityDrops": "true",
+    "doLimitedCrafting": "true",
+    "mobGriefing": "false",
+    "randomTickSpeed": "0",
+    "spawnRadius": "10",
+    "doTraderSpawning": "true",
+    "freezeDamage": "true",
+    "logAdminCommands": "false",
+    "spectatorsGenerateChunks": "true",
+    "sendCommandFeedback": "false",
+    "doPatrolSpawning": "true"
+  },
+  "resource_pack": {
+    "url": "",
+    "sha1": "",
+    "mc_can_download": false
+  }
+}

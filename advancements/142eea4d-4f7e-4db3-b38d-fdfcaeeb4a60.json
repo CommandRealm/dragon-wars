@@ -1,0 +1,21 @@
+{
+  "minecraft:custom/get_a_kill": {
+    "criteria": {
+      "impossible": "2022-04-07 22:47:51 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/play_game": {
+    "criteria": {
+      "impossible": "2022-04-06 20:58:40 -0700"
+    },
+    "done": true
+  },
+  "minecraft:custom/root": {
+    "criteria": {
+      "tick": "2022-04-06 20:55:25 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 2975
+}
