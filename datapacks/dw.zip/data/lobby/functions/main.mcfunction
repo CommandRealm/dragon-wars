@@ -66,7 +66,7 @@ execute as @a[tag=!playing,tag=test_elytra] at @s unless score @s elytra matches
 
 execute as @a[tag=test_elytra] at @s unless score @s elytra matches 1.. unless entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run function lobby:unequip_elytra
 
-execute if score $game state matches 1 as @a[tag=!playing] at @s unless entity @s[nbt={Inventory:[{Slot:2b,id:"minecraft:knowledge_book",tag:{book_type:2}}]}] run function lobby:get_join_book
+execute if score $game state matches 1 as @a[tag=!playing] at @s unless score $number mode matches 3 unless entity @s[nbt={Inventory:[{Slot:2b,id:"minecraft:knowledge_book",tag:{book_type:2}}]}] run function lobby:get_join_book
 execute if score $game state matches 1 as @a[tag=!playing] at @s unless entity @s[nbt={Inventory:[{Slot:6b,id:"minecraft:knowledge_book",tag:{book_type:1}}]}] run function lobby:get_spec_book
 
 

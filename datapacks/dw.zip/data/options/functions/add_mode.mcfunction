@@ -3,6 +3,12 @@
 execute if score $number mode matches 3 run scoreboard players operation $number team = $save team
 execute if score $number mode matches 3 run function options:add_team
 
+execute if score $number mode matches 3 run scoreboard players operation $time firework_time = $save firework_time
+execute if score $number mode matches 3 run function options:add_firework
+
+execute if score $number mode matches 3 run scoreboard players operation $round round_criteria = $save round_criteria
+execute if score $number mode matches 3 run function options:add_round
+
 setblock 0 68 48 air
 playsound minecraft:ui.button.click master @s
 scoreboard players add $number mode 1
@@ -25,6 +31,14 @@ kill @e[type=item,x=-7,y=66,z=46,distance=..10,nbt={Item:{id:"minecraft:jungle_p
 # if we're on comp save the teams amount
 execute if score $number mode matches 3 run scoreboard players operation $save team = $number team
 execute if score $number mode matches 3 run scoreboard players remove $save team 1
+
+# if we're on comp save the firework amount
+execute if score $number mode matches 3 run scoreboard players operation $save firework_time = $time firework_time
+execute if score $number mode matches 3 run scoreboard players remove $save firework_time 1
+
+# if we're on comp save the round
+execute if score $number mode matches 3 run scoreboard players operation $save round_criteria = $round round_criteria
+execute if score $number mode matches 3 run scoreboard players remove $save round_criteria 1
 
 execute if score $number mode matches 0 run function options:round_settings
 execute if score $number mode matches 1 run function options:kill_settings
