@@ -41,3 +41,7 @@ execute as @a[tag=elytra_course,nbt={OnGround:1b},scores={parkour_time=20..}] at
 execute if entity @a[tag=elytra_course,scores={ring_sound=1..}] run function lobby:parkour/sound/main
 
 clear @a[tag=elytra_course,scores={damage=1..}] elytra
+
+
+execute store result score $ticks parkour_time run worldborder get
+execute if score $ticks parkour_time matches 59000000.. run function lobby:parkour/set_worldborder

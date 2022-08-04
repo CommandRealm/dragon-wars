@@ -1,4 +1,4 @@
-scoreboard players set $mod rand_cosmetic 15
+scoreboard players set $mod rand_cosmetic 18
 summon area_effect_cloud ~ ~1 ~ {Tags:["random"],Age:1}
 execute store result score $rand rand_cosmetic run data get entity @e[type=area_effect_cloud,tag=random,limit=1] UUID[0] 1
 scoreboard players operation $rand rand_cosmetic %= $mod rand_cosmetic
@@ -18,3 +18,7 @@ execute if score $rand rand_cosmetic matches 11 run function cosmetic:unlock_gho
 execute if score $rand rand_cosmetic matches 12 run function cosmetic:unlock_arrow_rain
 execute if score $rand rand_cosmetic matches 13 run function cosmetic:unlock_dab
 execute if score $rand rand_cosmetic matches 14 run function cosmetic:unlock_cry
+
+execute if score $rand rand_cosmetic matches 15 run function cosmetic:unlock_t_sword_1
+execute if score $rand rand_cosmetic matches 16 run function cosmetic:unlock_t_sword_2
+execute if score $rand rand_cosmetic matches 17 run function cosmetic:unlock_t_sword_3

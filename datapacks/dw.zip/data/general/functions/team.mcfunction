@@ -21,5 +21,5 @@ team join cr @s[scores={prefix=99}]
 
 team join tournament @s[scores={prefix=98}]
 
-
+team join organizer @s[scores={prefix=95}]
 team join prefix @s[tag=prefix]

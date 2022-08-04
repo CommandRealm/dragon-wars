@@ -31,6 +31,15 @@ team modify srbld collisionRule never
 team modify srprg collisionRule never
 team modify true_gamer collisionRule never
 
+team add organizer
+team modify organizer color light_purple
+team modify organizer prefix [{"text":"[","color":"#5f5511"},{"text":"Ｔ","color":"gold","bold":false,"italic": true},{"text":"] ","color":"#5f5511"},{"text":"Organizer ","color":"gray","bold":false}]
+
+team add tournament
+team modify tournament color light_purple
+team modify tournament prefix [{"text":"(","color":"dark_gray","bold":true},{"text":"Tournament","color":"gray","bold":false},{"text":") ","color":"dark_gray","bold":true}]
+
+
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add newplayer dummy
 scoreboard objectives add intro dummy
@@ -228,6 +237,10 @@ scoreboard objectives add click_18 dummy
 scoreboard objectives add click_19 dummy
 scoreboard objectives add click_20 dummy
 scoreboard objectives add click_21 dummy
+scoreboard objectives add click_22 dummy
+scoreboard objectives add click_23 dummy
+scoreboard objectives add click_24 dummy
+scoreboard objectives add click_25 dummy
 
 scoreboard objectives add get_firework minecraft.dropped:minecraft.firework_rocket
 scoreboard objectives add get_sword minecraft.dropped:minecraft.stone_sword
@@ -429,3 +442,10 @@ scoreboard players set $map_set tutorial 0
 
 # 
 # An elytra is attached automatically to each player. To open it, press the SPACE button while in the air. Glide to the island below.
+
+# world border timer scores
+scoreboard players set $58000000 number 58000000
+scoreboard players set $6000 number 6000
+scoreboard players set $5 number 5
+
+scoreboard objectives add parkour_start dummy

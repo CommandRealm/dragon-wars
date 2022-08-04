@@ -30,3 +30,9 @@ scoreboard players reset @s damage
 
 title @s title [{"text":" "}]
 title @s subtitle [{"text":"= ","color":"dark_purple"},{"text":"Deploy ","color":"yellow","italic":false},{"text":"your","color":"gray","italic":false},{"text":" elytra","color":"light_purple","italic":false},{"text":"!","color":"gray"},{"text":" =","color":"dark_purple"}]
+
+
+execute store result score $ticks parkour_time run worldborder get
+execute if score $ticks parkour_time matches 59000000.. run function lobby:parkour/set_worldborder
+
+execute store result score @s parkour_start run worldborder get

@@ -19,3 +19,9 @@ execute store result score @s click_18 run clear @s purple_stained_glass_pane{Ch
 execute store result score @s click_19 run clear @s orange_stained_glass_pane{ChestSword:15}
 execute store result score @s click_20 run clear @s orange_stained_glass_pane{ChestSword:16}
 execute store result score @s click_21 run clear @s lime_stained_glass_pane{ChestSword:17}
+
+execute store result score @s click_22 run clear @s orange_stained_glass_pane{ChestSword:18}
+execute store result score @s click_23 run clear @s orange_stained_glass_pane{ChestSword:19}
+execute store result score @s click_24 run clear @s orange_stained_glass_pane{ChestSword:20}
+
+execute store result score @s click_25 run clear @s netherite_sword

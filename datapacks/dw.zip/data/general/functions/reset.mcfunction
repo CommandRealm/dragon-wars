@@ -8,6 +8,11 @@ tag @s remove sword_final_wrath
 tag @s remove sword_stabby
 tag @s remove sword_swordie
 tag @s remove sword_idk
+
+tag @s remove sword_combo
+tag @s remove sword_pulled
+tag @s remove sword_secret
+
 tag @s remove celebration_unicorn
 tag @s remove celebration_egg
 tag @s remove celebration_arrow_rain
@@ -75,6 +80,8 @@ execute if entity @s[tag=has_srprg] run scoreboard players set @s prefix 5
 execute if entity @s[tag=has_pc] run scoreboard players set @s prefix -2
 execute if entity @s[tag=has_melon] run scoreboard players set @s prefix -3
 
+
+execute if entity @s[tag=has_organizer] run scoreboard players set @s prefix 95
 execute if entity @s[tag=has_manager] run scoreboard players set @s prefix 6
 execute if entity @s[tag=has_lead] run scoreboard players set @s prefix 7
 

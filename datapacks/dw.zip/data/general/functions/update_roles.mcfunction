@@ -166,3 +166,31 @@ tag Beybwug add has_cr
 tag Mezimo add has_cr
 tag Shullker add has_cr
 tag Pinkessi add has_cr
+
+
+# organizers
+tag FalconReign add has_organizer
+tag Connop add has_organizer
+tag EdLePug add has_organizer
+
+# has_tournament
+tag Shullker add has_tournament
+tag 3letters_ add has_tournament
+tag J70 add has_tournament
+tag 4953makcim add has_tournament
+tag Bretos add has_tournament
+tag 1ona add has_tournament
+
+
+# tournament sword names
+
+tag @a remove has_t_j22_3
+tag @a remove has_t_j22_2
+tag @a remove has_t_j22_1
+
+tag Shullker add has_t_j22_1
+tag 3letters_ add has_t_j22_1
+tag J70 add has_t_j22_2
+tag 4953makcim add has_t_j22_3
+tag Bretos add has_t_j22_3
+tag 1ona add has_t_j22_2

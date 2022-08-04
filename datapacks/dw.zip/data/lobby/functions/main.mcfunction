@@ -81,7 +81,7 @@ execute if entity @a[tag=elytra_course_pad,tag=!playing] run function lobby:park
 
 ##If someone starts the parkour.
 
-execute as @a[x=-27,y=65,z=5,dx=1,dy=5,dz=6,gamemode=adventure,tag=!elytra_course,nbt={OnGround:0b}] at @s run function lobby:parkour/enter
+execute as @a[x=-27,y=65,z=5,dx=1,dy=5,dz=6,gamemode=adventure,tag=!elytra_course,nbt={OnGround:0b},tag=elytra_course_pad] at @s run function lobby:parkour/enter
 
 ##If someone is parkouring.
 execute if entity @a[tag=elytra_course] run function lobby:parkour/main

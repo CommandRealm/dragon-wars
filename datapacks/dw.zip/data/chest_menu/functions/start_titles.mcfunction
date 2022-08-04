@@ -25,6 +25,7 @@ item replace entity @s[tag=has_art] enderchest.9 with book{clickable:1,HideFlags
 item replace entity @s[tag=has_pc] enderchest.26 with book{clickable:1,HideFlags:63,display:{Name:'[{"text":"(","color":"dark_gray","italic":false},{"text":"pc","color":"green","bold":true},{"text":")","color":"dark_gray"}]'}}
 item replace entity @s[tag=has_melon] enderchest.25 with book{clickable:1,HideFlags:63,display:{Name:'[{"text":"(","color":"red","italic":false},{"text":"Melon","color":"green","bold":true},{"text":")","color":"red"}]'}}
 item replace entity @s[tag=has_tournament] enderchest.24 with book{clickable:1,HideFlags:63,display:{Name:'[{"text":"(","color":"dark_gray","italic":false,"bold":true},{"text":"Tournament","color":"gray","bold":false},{"text":")","color":"dark_gray","bold":true}]'}}
+item replace entity @s[tag=has_organizer] enderchest.23 with book{clickable:1,HideFlags:63,display:{Name:'[{"text":"[","color":"#5f5511","italic":false},{"text":"Ｔ","color":"gold","bold":false,"italic": true},{"text":"] ","color":"#5f5511"},{"text":"Organizer ","color":"gray","bold":false}]'}}
 
 
 item replace entity @s[scores={prefix=0}] enderchest.0 with written_book{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"(Tester)","bold":false,"italic":false,"color":"light_purple"}]'}}
@@ -40,6 +41,7 @@ item replace entity @s[scores={prefix=8}] enderchest.9 with written_book{invalid
 item replace entity @s[scores={prefix=-2}] enderchest.26 with written_book{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"(","color":"dark_gray","italic":false},{"text":"pc","color":"green","bold":true},{"text":")","color":"dark_gray"}]'}}
 item replace entity @s[scores={prefix=-3}] enderchest.25 with written_book{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"(","color":"red","italic":false},{"text":"Melon","color":"green","bold":true},{"text":")","color":"red"}]'}}
 item replace entity @s[scores={prefix=98}] enderchest.24 with written_book{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"(","color":"dark_gray","italic":false,"bold":true},{"text":"Tournament","color":"gray","bold":false},{"text":")","color":"dark_gray","bold":true}]'}}
+item replace entity @s[scores={prefix=95}] enderchest.23 with written_book{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"[","color":"#5f5511","italic":false},{"text":"Ｔ","color":"gold","bold":false,"italic": true},{"text":"] ","color":"#5f5511"},{"text":"Organizer ","color":"gray","bold":false}]'}}
 
 
 # 

@@ -13,6 +13,7 @@ execute unless data entity @s[tag=has_art] EnderItems[{Slot:9b}] run scoreboard 
 execute unless data entity @s[tag=has_pc] EnderItems[{Slot:26b}] run scoreboard players set @s prefix -2
 execute unless data entity @s[tag=has_melon] EnderItems[{Slot:25b}] run scoreboard players set @s prefix -3
 execute unless data entity @s[tag=has_tournament] EnderItems[{Slot:24b}] run scoreboard players set @s prefix 98
+execute unless data entity @s[tag=has_organizer] EnderItems[{Slot:23b}] run scoreboard players set @s prefix 95
 
 execute unless data entity @s EnderItems[{Slot:18b}] run function chest_menu:start
 

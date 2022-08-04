@@ -54,7 +54,7 @@ execute unless score $time timer matches 9960.. if entity @a[tag=warning] run fu
 scoreboard players set @a[tag=!warning] warning -1
 
 execute if entity @a[scores={kill=1..},tag=playing] run function game:kill
-execute as @e[tag=chest] at @s if block ~ ~ ~ redstone_lamp[lit=true] if block ~ ~1 ~ trapped_chest run function game:chest_break
+execute as @e[type=area_effect_cloud,tag=chest] at @s if block ~ ~ ~ redstone_lamp[lit=true] if block ~ ~1 ~ trapped_chest run function game:chest_break
 execute if entity @e[tag=jump_pad] run function game:jump_pad
 
 scoreboard players set @a[scores={axe_dealt=1..}] axe_dealt 0

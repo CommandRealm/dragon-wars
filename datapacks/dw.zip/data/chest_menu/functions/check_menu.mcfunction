@@ -8,6 +8,8 @@ execute as @a[scores={menu=6},tag=!playing] at @s run function chest_menu:menu_6
 execute as @a[scores={menu=7},tag=!playing] at @s run function chest_menu:menu_7
 execute as @a[scores={menu=8},tag=!playing] at @s run function chest_menu:menu_8
 execute as @a[scores={menu=9},tag=!playing] at @s run function chest_menu:menu_9
+execute as @a[scores={menu=10},tag=!playing] at @s run function chest_menu:menu_10
+execute as @a[scores={menu=11},tag=!playing] at @s run function chest_menu:menu_11
 execute as @a[scores={menu=99},tag=!playing] at @s run function chest_menu:menu_99
 execute as @a[scores={click_1=1..}] at @s run function chest_menu:click_1
 execute as @a[scores={click_2=1..}] at @s run function chest_menu:click_2
@@ -30,3 +32,7 @@ execute as @a[scores={click_18=1..}] at @s run function chest_menu:click_18
 execute as @a[scores={click_19=1..}] at @s run function chest_menu:click_19
 execute as @a[scores={click_20=1..}] at @s run function chest_menu:click_20
 execute as @a[scores={click_21=1..}] at @s run function chest_menu:click_21
+execute as @a[scores={click_22=1..}] at @s run function chest_menu:click_22
+execute as @a[scores={click_23=1..}] at @s run function chest_menu:click_23
+execute as @a[scores={click_24=1..}] at @s run function chest_menu:click_24
+execute as @a[scores={click_25=1..}] at @s run function chest_menu:click_25

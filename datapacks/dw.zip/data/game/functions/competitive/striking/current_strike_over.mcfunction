@@ -19,9 +19,9 @@ execute if score $strikes competitive matches 1.. run scoreboard players set $ti
 
 tp @a[tag=playing,x=57,y=72,z=18,distance=5..] 57 72 18
 execute if score $strikes competitive matches 1.. run function game:competitive/striking/start_striker
-execute if score $strikes competitive matches 0 unless entity @a[tag=playing,scores={comp_wins=1..}] run tp @a[tag=playing] 57 72 18
-execute if score $strikes competitive matches 0 unless entity @a[tag=playing,scores={comp_wins=1..}] run scoreboard players set $time competitive 601
-execute if score $strikes competitive matches 0 unless entity @a[tag=playing,scores={comp_wins=1..}] run schedule function game:competitive/striking/over 10t
+execute if score $strikes competitive matches 0 run tp @a[tag=playing] 57 72 18
+execute if score $strikes competitive matches 0 run scoreboard players set $time competitive 601
+execute if score $strikes competitive matches 0 run schedule function game:competitive/striking/over 10t
 
 # sound
 execute as @a[tag=playing] at @s run playsound minecraft:entity.blaze.hurt master @s ~ ~ ~ 1 0

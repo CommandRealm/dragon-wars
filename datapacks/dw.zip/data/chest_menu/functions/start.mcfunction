@@ -3,15 +3,14 @@ execute if entity @s[scores={ender_chest=1..}] run playsound minecraft:block.not
 scoreboard players set @s ender_chest 0
 
 
-item replace entity @s enderchest.4 with elytra{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Tutorial","color":"light_purple","italic":false,"bold":true}'},button:1}
+item replace entity @s enderchest.1 with golden_helmet{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Cosmetics","color":"yellow","italic":false,"bold":true}'}}
+item replace entity @s enderchest.3 with elytra{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Tutorial","color":"light_purple","italic":false,"bold":true}'},button:1}
+item replace entity @s enderchest.5 with nether_star{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Statistics","color":"green","italic":false,"bold":true}'}}
+item replace entity @s enderchest.20 with music_disc_wait{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Personal Settings","color":"dark_purple","italic":false,"bold":true}'}}
+item replace entity @s enderchest.24 with command_block{Chest:1,KillWhenDropped:1,display:{Lore:['[{"text":"The Command","color":"aqua","italic":false,"bold":true},{"text":" Realm","color":"dark_aqua"},{"text":" Team","color":"aqua"}]'],Name:'{"text":"Credits","color":"gray","italic":false,"bold":true,"bold":true}'}}
+item replace entity @s enderchest.22 with chiseled_deepslate{Chest:1,KillWhenDropped:1,display:{Name:'{"text":"Tournaments","color":"gold","italic":false,"bold":true}'}}
 
-
-item replace entity @s enderchest.9 with golden_helmet{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Cosmetics","color":"yellow","italic":false,"bold":true}'}}
-item replace entity @s enderchest.11 with nether_star{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Statistics","color":"green","italic":false,"bold":true}'}}
-item replace entity @s enderchest.22 with music_disc_wait{HideFlags:63,KillWhenDropped:1,display:{Name:'{"text":"Personal Settings","color":"gold","italic":false,"bold":true}'}}
-item replace entity @s enderchest.15 with command_block{Chest:1,KillWhenDropped:1,display:{Lore:['[{"text":"The Command","color":"aqua","italic":false,"bold":true},{"text":" Realm","color":"dark_aqua"},{"text":" Team","color":"aqua"}]'],Name:'{"text":"Credits","color":"gray","italic":false,"bold":true,"bold":true}'}}
-
-item replace entity @s enderchest.17 with netherite_block{Chest:1,KillWhenDropped:1,display:{Name:'[{"text":"Leaderboards","color":"dark_aqua","italic":false,"bold":true}]'}}
+item replace entity @s enderchest.7 with netherite_block{Chest:1,KillWhenDropped:1,display:{Name:'[{"text":"Leaderboards","color":"dark_aqua","italic":false,"bold":true}]'}}
 
 scoreboard players set @s menu 0
 scoreboard players set @s click_1 0
