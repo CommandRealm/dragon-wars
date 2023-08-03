@@ -5,7 +5,7 @@ tp @a[tag=playing] 57 72 18
 
 # seeing how many strikes there should be
 
-scoreboard players set $strikes competitive 4
+scoreboard players set $strikes competitive 6
 
 # removing tag saying I striked
 tag @a remove striked

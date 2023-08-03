@@ -38,7 +38,7 @@ scoreboard players enable @a select_team
 execute as @a[scores={select_team=1..}] at @s run function lobby:check_team
 
 advancement grant @a[nbt={SelectedItem:{id:"minecraft:shield"}},advancements={custom/block_with_shield=false}] only minecraft:custom/block_with_shield
-advancement grant @a[nbt={ActiveEffects:[{Id:28b}]},advancements={custom/obtain_slow_falling=false}] only minecraft:custom/obtain_slow_falling
+advancement grant @a[nbt={ActiveEffects:[{Id:28}]},advancements={custom/obtain_slow_falling=false}] only minecraft:custom/obtain_slow_falling
 advancement grant @a[advancements={custom/unlock_boost_particle=false,custom/block_with_shield=true,custom/use_risky_brew=true,custom/step_on_ice_mine=true,custom/obtain_slow_falling=true,custom/use_levitation_blast=true,custom/equip_armors=true,custom/use_tornado_jump=true}] only minecraft:custom/unlock_boost_particle
 advancement grant @a[advancements={custom/unlock_sword_name=false,custom/get_a_kill=true,custom/get_a_kill_while_flying=true,custom/get_a_kill_near_void=true,custom/kill_with_rage_axe=true,custom/kill_with_vampiric_stake=true,custom/kill_player_with_treasure_blocks=true}] only minecraft:custom/unlock_sword_name
 advancement grant @a[advancements={custom/unlock_prefix=false,custom/equip_elytra=true,custom/complete_tutorial=true,custom/open_chest=true,custom/use_firework=true,custom/fall_off_lobby=true,custom/ride_dragon=true,custom/find_cr=true,custom/check_out_socials=true}] only minecraft:custom/unlock_prefix

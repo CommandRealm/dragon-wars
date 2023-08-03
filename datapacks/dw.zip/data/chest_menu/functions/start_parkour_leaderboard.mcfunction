@@ -69,13 +69,13 @@ clear @s tipped_arrow
 scoreboard players operation @s parkour_time = @s parkour_score
 function lobby:parkour/calculate_time
 ##Putting it on a sign, so it's easier to read off later.
-execute if score $minute calculate matches 0 run data modify block 0 50 0 Text1 set value '[{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
-execute if score $minute calculate matches 1.. if score $second calculate matches 10.. run data modify block 0 50 0 Text1 set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
-execute if score $minute calculate matches 1.. if score $second calculate matches ..9 run data modify block 0 50 0 Text1 set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 0 run data modify block 0 50 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 1.. if score $second calculate matches 10.. run data modify block 0 50 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 1.. if score $second calculate matches ..9 run data modify block 0 50 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
 
 summon area_effect_cloud 0 0 0 {Tags:["die_soon"]}
 
-data modify entity @e[type=area_effect_cloud,tag=die_soon,limit=1] CustomName set from block 0 50 0 Text1
+data modify entity @e[type=area_effect_cloud,tag=die_soon,limit=1] CustomName set from block 0 50 0 front_text.messages[0]
 
 loot replace block 0 48 0 container.14 loot leaderboards:parkour_highscore
 

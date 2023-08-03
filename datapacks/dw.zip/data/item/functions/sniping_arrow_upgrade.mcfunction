@@ -6,8 +6,10 @@ execute store result score @s calculate run data get entity @s damage 10
 
 
 # adding one
-scoreboard players add @s calculate 1
+# scoreboard players add @s calculate 1
+execute if score @s calculate matches 10.. run scoreboard players add @s calculate 1
 execute if score @s calculate matches 20.. run scoreboard players add @s calculate 1
+execute if score @s calculate matches 40.. run scoreboard players add @s calculate 1
 execute if score @s calculate matches 50.. run scoreboard players add @s calculate 1
 
 # reapplying damage score

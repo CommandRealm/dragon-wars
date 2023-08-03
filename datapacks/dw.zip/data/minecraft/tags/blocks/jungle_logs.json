@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "minecraft:jungle_log",
-    "minecraft:jungle_wood",
-    "minecraft:stripped_jungle_log",
-    "minecraft:stripped_jungle_wood"
+    "minecraft:cherry_log",
+    "minecraft:cherry_wood",
+    "minecraft:stripped_cherry_log",
+    "minecraft:stripped_cherry_wood"
   ]
 }

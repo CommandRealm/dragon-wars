@@ -22,6 +22,11 @@ team modify srbld prefix {"text":"{Sr. Builder} ","color":"dark_blue"}
 team modify srprg prefix {"text":"{Sr. Programmer} ","color":"dark_red"}
 team modify true_gamer prefix [{"text":"(","color":"dark_green","bold":true},{"text":"The True Gamer","color":"green","bold":false},{"text":") ","color":"dark_green","bold":true}]
 
+team add pc_role
+team modify pc_role color light_purple
+team modify pc_role prefix [{"text":"(","color":"dark_gray","bold":false},{"text":"pc","bold":true,"color":"green"},{"text":") ","bold":false,"color":"dark_gray"}]
+
+
 team modify lobby collisionRule never
 team modify test collisionRule never
 team modify help collisionRule never
@@ -30,6 +35,7 @@ team modify prg collisionRule never
 team modify srbld collisionRule never
 team modify srprg collisionRule never
 team modify true_gamer collisionRule never
+team modify pc_role collisionRule never
 
 team add organizer
 team modify organizer color light_purple
@@ -449,3 +455,6 @@ scoreboard players set $6000 number 6000
 scoreboard players set $5 number 5
 
 scoreboard objectives add parkour_start dummy
+
+# new setting
+scoreboard objectives add max_fireworks dummy

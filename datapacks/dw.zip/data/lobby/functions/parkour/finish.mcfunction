@@ -4,14 +4,14 @@
 ##Getting our time.
 function lobby:parkour/calculate_time
 ##Putting it on a sign, so it's easier to read off later.
-execute if score $minute calculate matches 0 run data modify block 0 50 0 Text1 set value '[{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 0 run data modify block 0 50 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
 
-execute if score $minute calculate matches 1.. if score $second calculate matches 10.. run data modify block 0 50 0 Text1 set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
-execute if score $minute calculate matches 1.. if score $second calculate matches ..9 run data modify block 0 50 0 Text1 set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 1.. if score $second calculate matches 10.. run data modify block 0 50 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 1.. if score $second calculate matches ..9 run data modify block 0 50 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
 
 ##Msg
 team join yellow
-tellraw @a[x=0,y=66,z=0,distance=..500] ["",{"text":"| ","color":"gray","bold":true},{"selector":"@s"},{"text":" has finished the elytra course in ","color":"gold"},{"nbt":"Text1","block":"0 50 0","interpret": true}]
+tellraw @a[x=0,y=66,z=0,distance=..500] ["",{"text":"| ","color":"gray","bold":true},{"selector":"@s"},{"text":" has finished the elytra course in ","color":"gold"},{"nbt":"front_text.messages[0]","block":"0 50 0","interpret": true}]
 tellraw @s [{"text":"╔╗","color":"dark_purple"},{"text":" You finished the elytra course!","color":"gold"}]
 
 # execute if score @s parkour_time matches ..700 unless score $difficulty settings matches -1 run advancement grant @s only advancements:hidden/hidden-parkour

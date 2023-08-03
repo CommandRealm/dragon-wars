@@ -86,6 +86,7 @@ tag 4953makcim add has_test
 tag Ardak78 add has_test
 tag sadkina2 add has_test
 tag TheViralMelon add has_test
+tag Mouese add has_test
 
 
 # help

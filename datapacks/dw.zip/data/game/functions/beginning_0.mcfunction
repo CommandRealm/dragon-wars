@@ -78,6 +78,8 @@ tag @e[tag=die_soon] add die
 tag @e[tag=die_soon] remove die_soon
 kill @e[tag=spawn]
 execute if score $time chest_refill matches -600 as @e[tag=chest] at @s run fill ~ ~1 ~ ~ ~1 ~ structure_void replace trapped_chest
+execute if score $time chest_refill matches -209 as @e[tag=chest] at @s run fill ~ ~1 ~ ~ ~1 ~ structure_void replace trapped_chest
+execute if score $time chest_refill matches -209 as @e[tag=chest] at @s run fill ~ ~1 ~ ~ ~1 ~ structure_void replace air
 execute if score $time chest_refill matches -300.. as @e[tag=chest] at @s run function game:chest_rotation
 bossbar set minecraft:refill players @a[tag=playing]
 

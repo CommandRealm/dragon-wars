@@ -5,14 +5,23 @@ scoreboard players remove $strikes competitive 1
 
 
 # selecting next striker
-execute if score $strikes competitive matches 3 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_blue_striker
-execute if score $strikes competitive matches 3 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_red_striker
 
-execute if score $strikes competitive matches 2 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_blue_striker
-execute if score $strikes competitive matches 2 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_red_striker
+execute if score $strikes competitive matches 5 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_blue_striker
+execute if score $strikes competitive matches 5 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_red_striker
 
-execute if score $strikes competitive matches 1 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_red_striker
-execute if score $strikes competitive matches 1 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_blue_striker
+execute if score $strikes competitive matches 4 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_blue_striker
+execute if score $strikes competitive matches 4 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_red_striker
+
+
+execute if score $strikes competitive matches 3 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_blue_striker
+execute if score $strikes competitive matches 3 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_red_striker
+
+execute if score $strikes competitive matches 2 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_blue_striker
+execute if score $strikes competitive matches 2 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_red_striker
+
+execute if score $strikes competitive matches 1 if score $comp_team competitive matches 0 run function game:competitive/striking/choose_blue_striker
+execute if score $strikes competitive matches 1 if score $comp_team competitive matches 1 run function game:competitive/striking/choose_red_striker
+
 
 # resetting timer if another round is needed
 execute if score $strikes competitive matches 1.. run scoreboard players set $time competitive 1

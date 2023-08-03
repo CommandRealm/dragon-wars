@@ -9,6 +9,9 @@ execute if score $number mode matches 3 run function options:add_firework
 execute if score $number mode matches 3 run scoreboard players operation $round round_criteria = $save round_criteria
 execute if score $number mode matches 3 run function options:add_round
 
+execute if score $number mode matches 3 run scoreboard players operation $number max_fireworks = $save max_fireworks
+execute if score $number mode matches 3 run function options:add_max_firework
+
 setblock 0 68 48 air
 playsound minecraft:ui.button.click master @s
 scoreboard players add $number mode 1
@@ -17,16 +20,16 @@ execute if score $number mode matches ..-1 run scoreboard players set $number mo
 
 
 
-execute if score $number mode matches 0 run setblock 0 68 48 jungle_wall_sign[facing=north]{Text1:'{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}',Text2:'{"text":"Mode:","color":"dark_purple","bold":true}',Text3:'{"text":"Rounds","color":"yellow"}',Text4:'[{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}]'}
-execute if score $number mode matches 1 run setblock 0 68 48 jungle_wall_sign[facing=north]{Text1:'{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}',Text2:'{"text":"Mode:","color":"dark_purple","bold":true}',Text3:'{"text":"Kills","color":"yellow"}',Text4:'{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}'}
-execute if score $number mode matches 2 run setblock 0 68 48 jungle_wall_sign[facing=north]{Text1:'{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}',Text2:'{"text":"Mode:","color":"dark_purple","bold":true}',Text3:'{"text":"Treasure","color":"yellow"}',Text4:'{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}'}
-execute if score $number mode matches 3 run setblock 0 68 48 jungle_wall_sign[facing=north]{Text1:'{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}',Text2:'{"text":"Mode:","color":"dark_purple","bold":true}',Text3:'{"text":"Competitive","color":"yellow"}',Text4:'{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}'}
+execute if score $number mode matches 0 run setblock 0 68 48 cherry_wall_sign[facing=north]{front_text:{messages:['{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}', '{"text":"Mode:","color":"dark_purple","bold":true}', '{"text":"Rounds","color":"yellow"}', '[{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}]']}}
+execute if score $number mode matches 1 run setblock 0 68 48 cherry_wall_sign[facing=north]{front_text:{messages:['{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}', '{"text":"Mode:","color":"dark_purple","bold":true}', '{"text":"Kills","color":"yellow"}', '{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}']}}
+execute if score $number mode matches 2 run setblock 0 68 48 cherry_wall_sign[facing=north]{front_text:{messages:['{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}', '{"text":"Mode:","color":"dark_purple","bold":true}', '{"text":"Treasure","color":"yellow"}', '{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}']}}
+execute if score $number mode matches 3 run setblock 0 68 48 cherry_wall_sign[facing=north]{front_text:{messages:['{"text":" ","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"}}', '{"text":"Mode:","color":"dark_purple","bold":true}', '{"text":"Competitive","color":"yellow"}', '{"text":"<<<         >>>","color":"dark_purple","bold":true,"clickEvent":{"action":"run_command","value":"/execute as @s at @s anchored eyes if score $game state matches 0 run function options:click_mode"}}']}}
 fill -6 70 47 -7 68 47 air
 kill @e[tag=display_round]
 kill @e[tag=display_kill]
 kill @e[tag=display_treasure]
-kill @e[type=item,x=-7,y=66,z=46,distance=..10,nbt={Item:{id:"minecraft:jungle_sign"}}] 
-kill @e[type=item,x=-7,y=66,z=46,distance=..10,nbt={Item:{id:"minecraft:jungle_pressure_plate"}}]
+kill @e[type=item,x=-7,y=66,z=46,distance=..10,nbt={Item:{id:"minecraft:cherry_sign"}}] 
+kill @e[type=item,x=-7,y=66,z=46,distance=..10,nbt={Item:{id:"minecraft:cherry_pressure_plate"}}]
 
 # if we're on comp save the teams amount
 execute if score $number mode matches 3 run scoreboard players operation $save team = $number team
@@ -39,6 +42,10 @@ execute if score $number mode matches 3 run scoreboard players remove $save fire
 # if we're on comp save the round
 execute if score $number mode matches 3 run scoreboard players operation $save round_criteria = $round round_criteria
 execute if score $number mode matches 3 run scoreboard players remove $save round_criteria 1
+
+# if we're on comp save the round
+execute if score $number mode matches 3 run scoreboard players operation $save max_fireworks = $number max_fireworks
+execute if score $number mode matches 3 run scoreboard players remove $save max_fireworks 1
 
 execute if score $number mode matches 0 run function options:round_settings
 execute if score $number mode matches 1 run function options:kill_settings

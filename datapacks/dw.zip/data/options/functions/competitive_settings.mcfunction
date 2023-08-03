@@ -19,3 +19,7 @@ scoreboard players set $number team 1
 function options:add_team
 
 scoreboard players set $round round_criteria 3
+
+
+scoreboard players set $number max_fireworks 3
+function options:add_max_firework
