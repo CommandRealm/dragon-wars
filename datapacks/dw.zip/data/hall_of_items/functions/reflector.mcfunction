@@ -5,7 +5,7 @@ execute if entity @a[tag=toggle] run summon minecraft:armor_stand -3 56 25 {Cust
 playsound minecraft:ui.button.click master @s[tag=!no_msg] ~ ~ ~ 100000 1
 execute if entity @a[tag=toggle] run setblock 74 72 -13 cherry_wall_sign[facing=south]{front_text:{messages:['{"text":""}', '{"text":"Reflector","color":"dark_aqua","bold":false,"clickEvent":{"action":"run_command","value":"/function hall_of_items:reflector"}}', '{"text":"[ON]","color":"green"}', '{"text":""}']}}
 execute unless entity @a[tag=toggle] run setblock 74 72 -13 cherry_wall_sign[facing=south]{front_text:{messages:['{"text":""}', '{"text":"Reflector","color":"dark_aqua","bold":false,"clickEvent":{"action":"run_command","value":"/execute if score $game state matches 0 run function hall_of_items:reflector"}}', '{"text":"[OFF]","color":"dark_red"}', '{"text":""}']}}
-execute if entity @a[tag=toggle] run summon item 74 73 -14 {Item:{id:"minecraft:diamond",Count:3b,tag:{Enchantments:[{id:"x",lvl:1}]}},Age:-30000,Invulnerable:1b,PickupDelay:10124151,Tags:["item_model","item_temp","model_reflector","no_activate"]}
+execute if entity @a[tag=toggle] run summon item 74 73 -14 {Item:{id:"minecraft:diamond",Count:3b,tag:{Enchantments:[{}]}},Age:-30000,Invulnerable:1b,PickupDelay:10124151,Tags:["item_model","item_temp","model_reflector","no_activate"]}
 execute unless entity @a[tag=toggle] run kill @e[tag=model_reflector]
 tag @a remove toggle
 execute as @e[type=armor_stand,tag=item_spawn] at @s unless data entity @s ArmorItems[0].id run tag @s add temp

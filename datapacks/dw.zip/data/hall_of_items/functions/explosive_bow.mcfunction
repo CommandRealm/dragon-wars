@@ -5,7 +5,7 @@ execute if entity @a[tag=toggle] run summon minecraft:armor_stand -4 56 23 {Cust
 playsound minecraft:ui.button.click master @s[tag=!no_msg] ~ ~ ~ 100000 1
 execute if entity @a[tag=toggle] run setblock 56 72 -3 cherry_wall_sign[facing=north]{front_text:{messages:['{"text":"Explosive","color":"red","bold":false}', '{"text":"Bow","color":"gray","bold":false,"clickEvent":{"action":"run_command","value":"/function hall_of_items:explosive_bow"}}', '{"text":"[ON]","color":"green"}', '{"text":""}']}}
 execute unless entity @a[tag=toggle] run setblock 56 72 -3 cherry_wall_sign[facing=north]{front_text:{messages:['{"text":"Explosive","color":"red","bold":false}', '{"text":"Bow","color":"gray","bold":false,"clickEvent":{"action":"run_command","value":"/execute if score $game state matches 0 run function hall_of_items:explosive_bow"}}', '{"text":"[OFF]","color":"dark_red"}', '{"text":""}']}}
-execute if entity @a[tag=toggle] run summon item 56 73 -2 {Item:{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"x",lvl:1}],explosive_bow:1}},Age:-30000,Invulnerable:1b,PickupDelay:10124151,Tags:["item_model","item_temp","model_explosive_bow","unusable"]}
+execute if entity @a[tag=toggle] run summon item 56 73 -2 {Item:{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{}],explosive_bow:1}},Age:-30000,Invulnerable:1b,PickupDelay:10124151,Tags:["item_model","item_temp","model_explosive_bow","unusable"]}
 execute unless entity @a[tag=toggle] run kill @e[tag=model_explosive_bow]
 tag @a remove toggle
 execute as @e[type=armor_stand,tag=item_spawn] at @s unless data entity @s ArmorItems[0].id run tag @s add temp

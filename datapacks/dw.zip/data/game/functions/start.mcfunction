@@ -51,7 +51,7 @@ execute if score $number team matches 1 run scoreboard players add @a[tag=playin
 execute if score $number team matches 1 run scoreboard players add @a[tag=playing] kills 0
 execute if score $number team matches 1 run scoreboard players add @a[tag=playing] treasure 0
 scoreboard players set $time cooldown 0
-scoreboard objectives setdisplay belowName health
+scoreboard objectives setdisplay below_name health
 scoreboard players set : treasure 5
 
 scoreboard players set $mod tip 34
