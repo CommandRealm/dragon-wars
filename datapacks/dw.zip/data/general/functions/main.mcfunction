@@ -6,7 +6,7 @@ execute if entity @a[scores={intro=0..}] run function intro:main
 execute if score $game state matches 0 run function pregame:main
 execute if score $game state matches 1 run function game:check_main
 effect give @a[tag=!playing] saturation 2 0 true
-kill @e[type=tnt,nbt={Fuse:1s}]
+kill @e[type=tnt,nbt={fuse:1s}]
 execute if entity @a[x=0,y=66,z=0,distance=..500] run function lobby:main
 execute if entity @a[x=-1000,y=66,z=0,distance=..400] run function tutorial:main
 
