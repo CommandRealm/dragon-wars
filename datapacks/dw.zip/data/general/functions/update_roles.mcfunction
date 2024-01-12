@@ -157,16 +157,24 @@ tag Bodi25 add has_cr
 tag EdLePug add has_cr
 tag Bagee add has_cr
 tag BobaFate add has_cr
-tag knad add has_cr
-tag Urgle add has_cr
-tag NotInteligent add has_cr
-tag Coraze add has_cr
-tag rgbyy add has_cr
-tag bluepower add has_cr
-tag Beybwug add has_cr
 tag Mezimo add has_cr
 tag Shullker add has_cr
 tag Pinkessi add has_cr
+tag joelzoboyo add has_cr
+tag Beybwug add has_cr
+tag Coraze add has_cr
+tag oPando add has_cr
+tag vixy_11 add has_cr
+tag pogglin add has_cr
+tag Urgle add has_cr
+tag Billignton add has_cr
+tag Quackleb add has_cr
+tag TheTurtleDan add has_cr
+tag 3letters_ add has_cr
+tag Mouese add has_cr
+tag JaxF2008 add has_cr
+
+tag Pilllager add has_cr
 
 
 # organizers
