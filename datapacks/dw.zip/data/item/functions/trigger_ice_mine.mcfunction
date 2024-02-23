@@ -1,4 +1,4 @@
-advancement grant @p[gamemode=adventure] only minecraft:custom/step_on_ice_mine
+advancement grant @p[gamemode=adventure] only advancements:custom/step_on_ice_mine
 summon area_effect_cloud ~ ~-1 ~ {Tags:["ice_capsule","die","set_ice"],Duration:1000200}
 summon area_effect_cloud ~1 ~-1 ~ {Tags:["ice_capsule","die","set_ice"],Duration:1000200}
 summon area_effect_cloud ~ ~-1 ~1 {Tags:["ice_capsule","die","set_ice"],Duration:1000200}

@@ -43,10 +43,10 @@ function credits:pl
 function credits:hippeh
 function credits:deadpool
 execute unless score $time startup_timer matches 0.. as @a[x=-21,y=67,z=28,distance=..9,scores={ready=0}] at @s run function lobby:raycast
-execute if entity @a[advancements={completionist/completionist=true},tag=!playing] run function completionist:completionist_helix
-execute as @e[type=firework_rocket,x=0,y=66,z=0,distance=..400,nbt={Life:10}] at @s run advancement grant @p only minecraft:custom/use_firework
-advancement grant @a[x=-54,y=51,z=65,dx=160,dy=60,dz=150,nbt={OnGround:1b}] only minecraft:custom/ride_dragon
-advancement grant @a[x=13,y=44,z=-100,distance=..8] only minecraft:custom/find_cr
+execute if entity @a[advancements={advancements:completionist/completionist=true},tag=!playing] run function completionist:completionist_helix
+execute as @e[type=firework_rocket,x=0,y=66,z=0,distance=..400,nbt={Life:10}] at @s run advancement grant @p only advancements:custom/use_firework
+advancement grant @a[x=-54,y=51,z=65,dx=160,dy=60,dz=150,nbt={OnGround:1b}] only advancements:custom/ride_dragon
+advancement grant @a[x=13,y=44,z=-100,distance=..8] only advancements:custom/find_cr
 
 # drop ready book
 execute as @a[x=0,y=66,z=0,distance=..500,scores={drop_ready_book=1..}] at @s run function lobby:drop_ready_book

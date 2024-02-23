@@ -45,14 +45,14 @@ execute if score $number team matches 2.. if score $number mode matches 2 if ent
 execute if score $number team matches 2.. if score $number mode matches 2 if entity @a[tag=playing,tag=won_treasure_mode,team=gray] run scoreboard players add @a[team=gray,tag=playing] stats_wins 1
 
 execute as @a[tag=playing] at @s run scoreboard players operation @s temp_wins -= @s stats_wins
-execute if score $number mode matches 0 run advancement grant @a[scores={temp_wins=..-1},tag=playing] only minecraft:custom/win_rounds
-execute if score $number mode matches 1 run advancement grant @a[scores={temp_wins=..-1},tag=playing] only minecraft:custom/win_kills
-execute if score $number mode matches 2 run advancement grant @a[scores={temp_wins=..-1},tag=playing] only minecraft:custom/win_treasure
-execute if score $number team matches 2.. run advancement grant @a[scores={temp_wins=..-1},tag=playing] only minecraft:custom/win_teams
+execute if score $number mode matches 0 run advancement grant @a[scores={temp_wins=..-1},tag=playing] only advancements:custom/win_rounds
+execute if score $number mode matches 1 run advancement grant @a[scores={temp_wins=..-1},tag=playing] only advancements:custom/win_kills
+execute if score $number mode matches 2 run advancement grant @a[scores={temp_wins=..-1},tag=playing] only advancements:custom/win_treasure
+execute if score $number team matches 2.. run advancement grant @a[scores={temp_wins=..-1},tag=playing] only advancements:custom/win_teams
 
-advancement grant @a[scores={stats_wins=5..}] only minecraft:custom/win_five_games
-advancement grant @a[scores={stats_wins=10..}] only minecraft:custom/win_ten_games
-advancement grant @a[advancements={custom/unlock_celebration=false,custom/play_game=true,custom/win_rounds=true,custom/win_kills=true,custom/win_treasure=true,custom/win_teams=true,custom/win_five_games=true,custom/win_ten_games=true,custom/play_on_every_map=true}] only minecraft:custom/unlock_celebration
+advancement grant @a[scores={stats_wins=5..}] only advancements:custom/win_five_games
+advancement grant @a[scores={stats_wins=10..}] only advancements:custom/win_ten_games
+advancement grant @a[advancements={advancements:custom/unlock_celebration=false,advancements:custom/play_game=true,advancements:custom/win_rounds=true,advancements:custom/win_kills=true,advancements:custom/win_treasure=true,advancements:custom/win_teams=true,advancements:custom/win_five_games=true,advancements:custom/win_ten_games=true,advancements:custom/play_on_every_map=true}] only advancements:custom/unlock_celebration
 execute as @a[tag=playing] at @s run playsound minecraft:entity.ender_dragon.growl master @s ~ ~ ~ 1000000 1
 scoreboard players enable @a[tag=playing] unready_all
 scoreboard players set $time unready_cool 280

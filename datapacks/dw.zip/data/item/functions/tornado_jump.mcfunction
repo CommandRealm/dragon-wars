@@ -1,5 +1,5 @@
 kill @e[type=item,nbt={Item:{id:"minecraft:feather"}},sort=nearest,limit=1]
-execute unless entity @s[nbt={Inventory:[{id:"minecraft:elytra"}]}] run advancement grant @s[x=0,y=66,z=0,distance=500..] only minecraft:custom/use_tornado_jump
+execute unless entity @s[nbt={Inventory:[{id:"minecraft:elytra"}]}] run advancement grant @s[x=0,y=66,z=0,distance=500..] only advancements:custom/use_tornado_jump
 scoreboard players set @s drop_jump 0
 tag @s[scores={elytra=0}] add e_cooldown
 scoreboard players add @s[scores={elytra=0}] elytra 1

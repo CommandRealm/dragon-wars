@@ -51,4 +51,4 @@ playsound minecraft:entity.wither.ambient master @s ~ ~ ~ 0.5 2
 execute if score $rand brew_random matches 11.. if entity @s[tag=lucky] run playsound minecraft:item.totem.use master @s ~ ~ ~ 1 2
 execute if score $rand brew_random matches 11.. if entity @s[tag=lucky] run tellraw @s [{"text":"- ","color":"dark_purple"},{"text":"Effect negated by","color":"gray"},{"text":" lucky armor!","color":"yellow","italic":true}]
 kill @e[type=item,nbt={Item:{id:"minecraft:brewing_stand"}},distance=..10,sort=nearest,limit=1]
-advancement grant @s only minecraft:custom/use_risky_brew
+advancement grant @s only advancements:custom/use_risky_brew

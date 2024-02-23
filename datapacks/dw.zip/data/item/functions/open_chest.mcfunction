@@ -10,7 +10,7 @@ execute if entity @s[x=-1000,y=66,z=0,distance=..400] run give @s bow{Unbreakabl
 
 execute if entity @e[tag=lobby_chest,type=area_effect_cloud,distance=..15] if entity @e[tag=item_spawn,name="Ice Mine",tag=selected_item] run tag @e[tag=item_spawn,name="Iron Sword"] add selected_item
 execute if entity @e[tag=lobby_chest,type=area_effect_cloud,distance=..15] run tag @e[tag=item_spawn,name="Ice Mine",tag=selected_item] remove selected_item
-execute if entity @e[tag=lobby_chest,type=area_effect_cloud,distance=..15] run advancement grant @s only minecraft:custom/open_chest
+execute if entity @e[tag=lobby_chest,type=area_effect_cloud,distance=..15] run advancement grant @s only advancements:custom/open_chest
 execute if entity @e[tag=lobby_chest,type=area_effect_cloud,distance=..15] if entity @e[tag=item_spawn,name="Monster Horde",tag=selected_item] run tag @e[tag=item_spawn,name="Iron Sword"] add selected_item
 execute if entity @e[tag=lobby_chest,type=area_effect_cloud,distance=..15] run tag @e[tag=item_spawn,name="Monster Horde",tag=selected_item] remove selected_item
 
