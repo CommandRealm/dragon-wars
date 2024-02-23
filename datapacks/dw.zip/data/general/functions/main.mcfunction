@@ -6,7 +6,7 @@ execute if entity @a[scores={intro=0..}] run function intro:main
 execute if score $game state matches 0 run function pregame:main
 execute if score $game state matches 1 run function game:check_main
 effect give @a[tag=!playing] saturation 2 0 true
-kill @e[type=tnt,nbt={fuse:1s}]
+kill @e[type=tnt,nbt={fuse: 1s}]
 execute if entity @a[x=0,y=66,z=0,distance=..500] run function lobby:main
 execute if entity @a[x=-1000,y=66,z=0,distance=..400] run function tutorial:main
 
@@ -23,7 +23,7 @@ function item:lf_drop
 function item:check
 
 
-kill @e[type=chicken,nbt={Age:-24000}]
+kill @e[type=chicken,nbt={Age: -24000}]
 
 execute if entity @a[scores={tornado_jump=1..}] run function item:tornado_particles
 execute as @e[type=firework_rocket] at @s as @p[gamemode=adventure,sort=nearest,limit=1] if entity @s[scores={particle=1..}] at @s run function cosmetic:boost_particle
@@ -37,8 +37,8 @@ execute as @a[scores={description=1..}] at @s run function hall_of_items:descrip
 scoreboard players enable @a select_team
 execute as @a[scores={select_team=1..}] at @s run function lobby:check_team
 
-advancement grant @a[nbt={SelectedItem:{id:"minecraft:shield"}},advancements={advancements:custom/block_with_shield=false}] only advancements:custom/block_with_shield
-advancement grant @a[nbt={active_effects:[{id:"minecraft:slow_falling"}]},advancements={advancements:custom/obtain_slow_falling=false}] only advancements:custom/obtain_slow_falling
+advancement grant @a[nbt={SelectedItem: {id: "minecraft:shield"}},advancements={advancements:custom/block_with_shield=false}] only advancements:custom/block_with_shield
+advancement grant @a[nbt={active_effects: [{id: "minecraft:slow_falling"}]},advancements={advancements:custom/obtain_slow_falling=false}] only advancements:custom/obtain_slow_falling
 advancement grant @a[advancements={advancements:custom/unlock_boost_particle=false,advancements:custom/block_with_shield=true,advancements:custom/use_risky_brew=true,advancements:custom/step_on_ice_mine=true,advancements:custom/obtain_slow_falling=true,advancements:custom/use_levitation_blast=true,advancements:custom/equip_armors=true,advancements:custom/use_tornado_jump=true}] only advancements:custom/unlock_boost_particle
 advancement grant @a[advancements={advancements:custom/unlock_sword_name=false,advancements:custom/get_a_kill=true,advancements:custom/get_a_kill_while_flying=true,advancements:custom/get_a_kill_near_void=true,advancements:custom/kill_with_rage_axe=true,advancements:custom/kill_with_vampiric_stake=true,advancements:custom/kill_player_with_treasure_blocks=true}] only advancements:custom/unlock_sword_name
 advancement grant @a[advancements={advancements:custom/unlock_prefix=false,advancements:custom/equip_elytra=true,advancements:custom/complete_tutorial=true,advancements:custom/open_chest=true,advancements:custom/use_firework=true,advancements:custom/fall_off_lobby=true,advancements:custom/ride_dragon=true,advancements:custom/find_cr=true,advancements:custom/check_out_socials=true}] only advancements:custom/unlock_prefix
