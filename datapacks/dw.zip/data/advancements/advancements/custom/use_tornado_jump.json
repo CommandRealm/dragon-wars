@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:feather"},"title":{"text":"The Clutch!","color":"white","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Use a Tornado Jump while your elytra is unequipped during a match.","color":"gray","bold":false}},"parent": "advancements:custom/equip_armors","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

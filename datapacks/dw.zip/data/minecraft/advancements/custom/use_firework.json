@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:firework_rocket"},"title":{"text":"Training Course Expert","color":"red","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Use a firework at the lobby.","color":"dark_red","bold":false}},"parent":"custom/open_chest","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

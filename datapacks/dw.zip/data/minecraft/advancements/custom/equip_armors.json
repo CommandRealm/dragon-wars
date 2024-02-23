@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:firework_star"},"title":{"text":"Kitted Out","color":"white","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Equip all types of armor.","color":"gray","bold":false}},"parent":"custom/use_levitation_blast","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

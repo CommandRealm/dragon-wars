@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:stone_sword"},"title":{"text":"Got eem!","color":"gray","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Kill a player in Dragon Wars.","color":"#ececec","bold":false}},"parent":"custom/root","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:end_crystal"},"title":{"text":"Up We Go!","color":"#f9baff","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Use a Levitation Blast.","color":"#f9baff","bold":false}},"parent":"custom/obtain_slow_falling","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

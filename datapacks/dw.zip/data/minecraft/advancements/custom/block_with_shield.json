@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:shield"},"title":{"text":"Block Master","color":"gold","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Hold a shield.","color":"yellow","bold":false}},"parent":"custom/root","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:brewing_stand"},"title":{"text":"The Dicey Play","color":"dark_purple","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Use a Risky Brew.","color":"light_purple","bold":false}},"parent":"custom/block_with_shield","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

@@ -1,1 +1,0 @@
-{"display":{"icon":{"item":"minecraft:elytra"},"title":{"text":"Airstrike","color":"light_purple","bold":true},"show_toast":true,"announce_to_chat":"false","description":{"text":"Kill a player while you're glidng.","color":"#c367c6","bold":false}},"parent":"custom/get_a_kill","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

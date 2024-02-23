@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:obsidian"},"title":{"text":"Winner!","color":"light_purple","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Win five games of Dragon Wars.","color":"dark_purple","bold":false}},"parent": "advancements:custom/win_teams","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

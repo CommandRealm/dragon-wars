@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:iron_axe"},"title":{"text":"Filled With Rage","color":"dark_red","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Kill a player with the Rage Axe.","color":"#b10101","bold":false}},"parent": "advancements:custom/get_a_kill_near_void","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

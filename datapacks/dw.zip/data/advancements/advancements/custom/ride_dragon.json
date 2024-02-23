@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:dragon_head"},"title":{"text":"Beast Tamer","color":"dark_purple","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Ride the dragon in the lobby.","color":"#6a0084","bold":false}},"parent": "advancements:custom/fall_off_lobby","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

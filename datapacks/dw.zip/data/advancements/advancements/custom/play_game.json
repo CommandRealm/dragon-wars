@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:map"},"title":{"text":"I Am Now A Dragon","color":"dark_purple","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Play a game of Dragon Wars.","color":"#6a0084","bold":false}},"parent": "advancements:custom/root","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:emerald_block"},"title":{"text":"Billionaire","color":"green","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Kill a player who has four treasure blocks.","color":"yellow","bold":false}},"parent": "advancements:custom/kill_with_vampiric_stake","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

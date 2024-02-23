@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:filled_map"},"title":{"text":"Been Everywhere!","color":"dark_green","bold":true},"show_toast":true,"announce_to_chat":false,"description":{"text":"Play a match on every map.","color":"green","bold":false}},"parent": "advancements:custom/win_ten_games","criteria":{"impossible":{"trigger":"minecraft:impossible"}}}
